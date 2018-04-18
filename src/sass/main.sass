@@ -3,8 +3,215 @@
 @import "libs"
 
 /*==========  user style  ==========*/
-.test
-	color: #000
-/*==========  user style  ==========*/
+.justify-between
+	justify-content: space-between
 
+.justify-end
+	justify-content: flex-end
+
+.align-center
+	align-self: center
+
+.zero-flex
+	flex: 0
+a
+	color: #000
+	&:hover
+		color: $color-1
+		text-decoration: none
+button
+	border: none
+	outline: 0 none
+	cursor: pointer
+.btn
+	display: inline-block
+	text-transform: uppercase
+	padding: 10px 20px
+	font-weight: 600
+	&-light
+		background-color: #fff
+	&-darken
+		background-color: $color-1
+		color: #ffffff
+		min-width: 150px
+
+.page-header
+	height: 130vh
+	width: 100%
+	background-color: $color-1
+	background-image: url('../img/header.jpg')
+	background-size: cover
+	position: relative
+	z-index: 1
+	overflow: hidden
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba($color-1,.6)
+		z-index: -1
+	.position-up
+		position: 
+		z-index: 10
+.top-phone,
+.top-mail,
+.top-work-time,
+.top-find-us
+	display: inline-block
+	padding: 15px 0
+	color: #a7a7a7
+	& a
+		color: #a7a7a7
+	& i
+		margin-right: 10px
+	&:hover
+		color: #fff
+		cursor: pointer
+	&:hover a
+		color: #fff
+
+.top-phone
+	a
+		border-right: 1px solid #a7a7a7
+		padding-right: 10px
+
+.top-work-time
+	a
+		border-right: 1px solid #a7a7a7
+		padding: 0 10px
+
+.top-mail,
+.top-find-us
+	margin-left: 10px
+
+.top-location
+	display: flex
+
+.top-menu
+	background-color: #fff
+
+.logo
+	margin: 15px 0 25px
+	a
+		display: flex
+		align-items: center
+	figure
+		display: inline-block
+		width: 50px
+		height: 50px
+		margin: 0
+		img
+			width: 100%
+	&-description
+		display: inline-block
+		text-transform: uppercase
+		font-weight: 600
+		font-size: 24px
+		margin-left: 10px
+
+.top-nav-bar
+	display: flex
+	align-items: baseline
+	background-color: #fff
+	.top-menu
+		display: flex
+		margin: 0
+		padding: 0
+		list-style: none
+	li
+		margin: 0 25px
+		position: relative
+		transition: 3s
+		&:last-child
+			margin-right: 20px
+		&::before
+			content: ''
+			position: absolute
+			width: 6px
+			height: 6px
+			border-radius: 50%
+			background-color: $color-2
+			top: 50%
+			left: -15px
+			transform: translateY(-50%)
+			opacity: 0
+			transition: opacity .2s
+		&:hover::before
+			opacity: 1
+		a
+			display: block
+			text-transform: uppercase
+			font-weight: 600
+
+.slogan-align
+	display: flex
+	align-items: center
+	height: calc(100vh - 144px)
+	.slogan
+		text-transform: uppercase
+		&-big
+			color: $color-2
+			font-size: 10em
+			margin-bottom: 100px
+			margin: 0
+			line-height: .9
+		&-medium
+			color: #fff
+			font-size: 3em
+			line-height: 1
+		&-big,
+		&-medium
+			font-weight: 600
+		&-small
+			text-transform: none
+			color: #fff
+			margin: 50px 0 30px
+
+.order
+	background-color: #fff
+	margin-top: 55vh
+	text-align: center
+	box-shadow: 15px 25px 0 0 $color-2
+	&-header
+		padding: 40px 0 25px
+		font-weight: 600
+		text-transform: uppercase
+	input,
+	select,
+	textarea
+		width: 80%
+		margin-bottom: 20px
+		border: 0
+		background: #f0f0f0
+		padding: 10px 20px
+	select
+		padding-left: 17px
+		color: #777
+	button
+		margin: 0 0 40px
+		font-size: .9em
+/*==========  user style  ==========*/
+/*==========  decoration  ==========*/
+.decoration-right
+	position: absolute
+	transform: translate(30%,50%) rotate(-30deg)
+	bottom: 0
+	right: 0
+	z-index: 1
+	width: 120vw
+	height: 50vw
+	background-color: #fff
+.decoration-left
+		position: absolute
+		transform: translate(-30%,80%) rotate(30deg)
+		bottom: 0
+		left: 0
+		z-index: 1
+		width: 120vw
+		height: 50vw
+		background-color: #fff
+/*==========  decoration  ==========*/
 @import "media" // Always at the end
