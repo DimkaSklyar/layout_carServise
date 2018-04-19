@@ -3,6 +3,9 @@
 @import "libs"
 
 /*==========  user style  ==========*/
+body
+	font-family: 'Rubik', sans-serif
+
 .justify-between
 	justify-content: space-between
 
@@ -10,10 +13,17 @@
 	justify-content: flex-end
 
 .align-center
-	align-self: center
+	align-items: center
 
 .zero-flex
 	flex: 0
+
+.m-auto
+	margin: auto
+
+.m-auto-0
+	margin: auto 0
+	text-align: right
 a
 	color: #000
 	&:hover
@@ -34,6 +44,9 @@ button
 		background-color: $color-1
 		color: #ffffff
 		min-width: 150px
+
+.section-description
+	columns: 2
 
 .page-header
 	height: 130vh
@@ -193,6 +206,95 @@ button
 	button
 		margin: 0 0 40px
 		font-size: .9em
+
+/*==========  section one  ==========*/
+.choose-us
+	background-color: #fff
+	background-image: url('../img/section-1.png')
+	background-repeat: no-repeat
+	background-position: 25px 170px
+	padding: 50px 0 140px
+.section-name
+	position: relative
+	margin-bottom: 15px
+	span
+		font-size: 10em
+		font-weight: 600
+		color: $color-2
+	h2
+		text-transform: uppercase
+		display: inline-block
+		background-color: #fff
+		position: absolute
+		padding: 10px 0
+		bottom: 45px
+		left: 23%
+	.feature
+		margin-bottom: 55px
+		figure
+			display: inline-block
+		h3
+			display: inline-block
+			margin-left: 15px
+		p
+			margin-top: 5px
+/*==========  section one  ==========*/
+
+/*==========  section gift  ==========*/
+.gift
+	background: $color-2 url('../img/gift.jpg') no-repeat
+	padding: 50px
+	.h-gift
+		font-size: 2.5em
+		text-transform: uppercase
+		font-weight: 600
+		color: $color-1
+	p
+		line-height: 1
+		span
+			font-weight: bold
+	
+
+/*==========  section gift  ==========*/
+/*==========  section two  ==========*/
+.services
+	padding: 50px 100px
+
+h2.section-name-02
+		left: 33%
+.view-all
+	color: $color-1
+	padding: 5px 0
+	border-bottom: 1px dashed $color-1
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		width: 20px
+		height: 2px
+		background-color: $color-1
+		right: -25px
+		top: 50%
+		transform: translateY(-50%)
+	&::after
+		content: ''
+		position: absolute
+		width: 0
+		height: 0
+		border-top: 4px solid transparent
+		border-left: 8px solid $color-1
+		border-bottom: 4px solid transparent
+		top: 50%
+		transform: translateY(-50%)
+		right: -30px
+
+.services-items
+	.services-item
+		figure
+			img
+				width: 100%
+
+/*==========  section two  ==========*/
 /*==========  user style  ==========*/
 /*==========  decoration  ==========*/
 .decoration-right
