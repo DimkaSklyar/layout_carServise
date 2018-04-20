@@ -4878,6 +4878,7 @@ html {
 /*==========  user style  ==========*/
 body {
   font-family: 'Rubik', sans-serif;
+  font-size: 0.95em;
 }
 
 .justify-between {
@@ -4888,12 +4889,20 @@ body {
   justify-content: flex-end;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .align-center {
   align-items: center;
 }
 
 .zero-flex {
   flex: 0;
+}
+
+.t-a {
+  text-align: center;
 }
 
 .m-auto {
@@ -5197,7 +5206,7 @@ button {
   position: absolute;
   padding: 10px 0;
   bottom: 45px;
-  left: 23%;
+  left: 21%;
 }
 
 .section-name .feature {
@@ -5242,11 +5251,11 @@ button {
 /*==========  section gift  ==========*/
 /*==========  section two  ==========*/
 .services {
-  padding: 50px 100px;
+  padding: 50px 0 150px;
 }
 
 h2.section-name-02 {
-  left: 33%;
+  left: 32%;
 }
 
 .view-all {
@@ -5280,11 +5289,258 @@ h2.section-name-02 {
   right: -30px;
 }
 
+.services-items {
+  margin-top: 50px;
+}
+
+.services-items .services-item {
+  text-align: center;
+}
+
+.services-items .services-item figure {
+  clip-path: polygon(78% 0, 100% 50%, 78% 100%, 22% 100%, 0 50%, 22% 0);
+  width: 330px;
+  height: 300px;
+  margin-bottom: 35px;
+}
+
 .services-items .services-item figure img {
-  width: 100%;
+  height: 100%;
+}
+
+.services-items .services-item p {
+  font-weight: 600;
+  color: #011e9e;
+  font-size: 1.1em;
 }
 
 /*==========  section two  ==========*/
+/*==========  section three  ==========*/
+.support {
+  background: #fff url("../img/section-3.jpg") no-repeat 50% 100%;
+  padding: 30px 0 200px;
+  background-size: cover;
+  min-height: 1080px;
+}
+
+.support-question p {
+  font-weight: 600;
+  color: #717171;
+  line-height: 2.5;
+}
+
+.support .section-name {
+  margin-bottom: 40px;
+}
+
+.support-more p {
+  margin-bottom: 2em;
+}
+
+.support-more p:last-of-type {
+  margin-bottom: 50px;
+}
+
+.support .view a:first-child {
+  margin-right: 30px;
+}
+
+h2.section-name-03 {
+  left: 10%;
+  background-color: #f0f0f2;
+}
+
+/*==========  section three  ==========*/
+/*==========  section four  ==========*/
+.shop {
+  padding: 50px 0 100px;
+}
+
+.shop-nav {
+  list-style: none;
+  margin: 35px 0 55px;
+}
+
+.shop-nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.shop-nav li:last-child {
+  margin-right: 0;
+}
+
+.shop-nav li a {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.shop-nav li a:hover {
+  color: #f3e200;
+}
+
+.shop-item-media {
+  position: relative;
+}
+
+.shop-item-media::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(1, 30, 158, 0.85);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .3s;
+}
+
+.shop-item-media .shop-item-about {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: .8em;
+  z-index: 1;
+  opacity: 0;
+  transition: .5s;
+}
+
+.shop-item-media .shop-item-about a {
+  margin-bottom: 10px;
+}
+
+.shop-item-media:hover .shop-item-about {
+  opacity: 1;
+  top: 55%;
+}
+
+.shop-item-media:hover::after {
+  opacity: 1;
+}
+
+.shop-item-media figure {
+  display: flex;
+  width: 100%;
+  height: 350px;
+  background-color: #eeeeee;
+}
+
+.shop-item-media figure img {
+  width: 100%;
+  margin: auto;
+}
+
+.shop-item-text {
+  margin-top: 25px;
+}
+
+.shop-item-text p {
+  font-size: 1.3em;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.shop-item-text .price {
+  color: #f3e200;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+h2.section-name-04 {
+  left: 50%;
+  top: 55%;
+}
+
+.section-name .section-description-04 {
+  width: 80%;
+  margin: -40px auto 0;
+  color: #717171;
+}
+
+/*==========  section four  ==========*/
+/*==========  section five  ==========*/
+.blog {
+  padding: 150px 0;
+  background: #011e9e url("../img/section-5.png") no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.blog::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(1, 30, 158, 0.85);
+  z-index: -1;
+}
+
+.blog-wrapper {
+  padding: 35px;
+  width: 100%;
+  height: 485px;
+  background-color: #fff;
+}
+
+.blog-header {
+  background-color: black;
+}
+
+.blog .section-name span {
+  line-height: .7;
+}
+
+.blog .section-name h2.section-name-05 {
+  top: 27%;
+  left: 36%;
+  bottom: auto;
+  background-color: black;
+  color: #fff;
+}
+
+.blog .section-name .section-description-05 {
+  margin-top: 40px;
+  color: #fff;
+}
+
+.blog .p-0 {
+  padding: 0;
+}
+
+.blog-media {
+  padding: 0;
+}
+
+.blog-media figure {
+  height: 310px;
+  overflow: hidden;
+}
+
+.blog-media figure img {
+  height: 100%;
+}
+
+.blog-text {
+  padding: 15px 40px;
+}
+
+.blog-text .post-theme {
+  color: #011e9e;
+  text-transform: uppercase;
+  font-size: .9em;
+}
+
+.blog-text .post-header {
+  font-weight: 900;
+  font-size: 1.4em;
+}
+
+/*==========  section five  ==========*/
 /*==========  user style  ==========*/
 /*==========  decoration  ==========*/
 .decoration-right {
