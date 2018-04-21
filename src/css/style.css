@@ -543,7 +543,7 @@ html {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1140px;
+    width: 1170px;
     max-width: 100%;
   }
 }
@@ -4897,8 +4897,16 @@ body {
   align-items: center;
 }
 
+.align-baseline {
+  align-items: baseline;
+}
+
 .zero-flex {
   flex: 0;
+}
+
+.d-flex {
+  display: flex;
 }
 
 .t-a {
@@ -4934,6 +4942,7 @@ button {
   text-transform: uppercase;
   padding: 10px 20px;
   font-weight: 600;
+  text-align: center;
 }
 
 .btn-light {
@@ -4944,6 +4953,28 @@ button {
   background-color: #011e9e;
   color: #ffffff;
   min-width: 150px;
+}
+
+input,
+select,
+textarea {
+  border: 0;
+  background: #f0f0f0;
+  padding: 10px 20px;
+}
+
+select {
+  padding-left: 17px;
+  color: #777;
+}
+
+button {
+  margin: 0 0 40px;
+  font-size: .9em;
+}
+
+h2 {
+  font-size: 1.4em;
 }
 
 .section-description {
@@ -5038,7 +5069,7 @@ button {
 }
 
 .logo {
-  margin: 15px 0 25px;
+  margin: 15px 0 15px;
 }
 
 .logo a {
@@ -5048,13 +5079,13 @@ button {
 
 .logo figure {
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   margin: 0;
 }
 
 .logo figure img {
-  width: 100%;
+  height: 100%;
 }
 
 .logo-description {
@@ -5242,6 +5273,7 @@ button {
 
 .gift p {
   line-height: 1;
+  font-size: 1.3em;
 }
 
 .gift p span {
@@ -5541,6 +5573,253 @@ h2.section-name-04 {
 }
 
 /*==========  section five  ==========*/
+/*==========  section six  ==========*/
+.team {
+  padding: 100px 0;
+}
+
+.team figure {
+  width: 100%;
+  text-align: center;
+}
+
+.team figure:hover figcaption {
+  box-shadow: 15px 10px 0 0 #f3e200, 1px 1px 2px 2px rgba(0, 0, 0, 0.09);
+}
+
+.team figure:hover img {
+  filter: grayscale(1);
+}
+
+.team figure img {
+  height: 100%;
+  filter: grayscale(0);
+  transition: 1s;
+}
+
+.team figure figcaption {
+  padding: 20px 0px 15px;
+  text-align: center;
+  background-color: #fff;
+  transition: .5s;
+}
+
+.team figure figcaption p {
+  line-height: 1;
+  margin-bottom: .8em;
+}
+
+.team figure figcaption .name {
+  font-size: 1.2em;
+  font-weight: 900;
+}
+
+.team figure figcaption .profession {
+  color: #717171;
+  font-size: 0.9em;
+}
+
+h2.section-name-06 {
+  bottom: auto;
+  top: 48%;
+  left: 40%;
+}
+
+.section-description-06 {
+  margin-top: -30px;
+}
+
+/*==========  section six  ==========*/
+/*==========  section seven  ==========*/
+.partners {
+  background-color: #eeeff1;
+  padding: 50px 0;
+}
+
+.partners figure {
+  margin: 0;
+}
+
+/*==========  section seven  ==========*/
+/*==========  section eight  ==========*/
+.subscribe {
+  background: #f3e200 url("../img/section-7.jpg");
+  padding: 0;
+}
+
+.subscribe-social {
+  padding: 100px 0;
+  position: relative;
+}
+
+.subscribe input {
+  width: 65%;
+  margin-right: 30px;
+}
+
+.subscribe .fallow-social {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  background-color: #011e9e;
+  padding: 10px 40px;
+  width: 100%;
+  color: #ffffff;
+}
+
+.subscribe .fallow-social p {
+  margin: 0;
+  font-weight: 300;
+  margin-right: 15px;
+  font-size: 1.2em;
+}
+
+.subscribe .fallow-social ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.subscribe .fallow-social ul li {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 1.2em;
+}
+
+.subscribe .fallow-social ul li:last-child {
+  margin-right: 0;
+}
+
+.subscribe .fallow-social ul li a {
+  color: inherit;
+  padding: 5px;
+  display: block;
+}
+
+.subscribe .fallow-social ul li:hover a {
+  color: #f3e200;
+}
+
+/*==========  section eight  ==========*/
+/*==========  section footer  ==========*/
+.footer-page {
+  background: #011e9e url("../img/footer.png") no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 100px;
+}
+
+.footer-page::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.footer-page .contact-info {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px 35px;
+}
+
+.footer-page .contact-info p {
+  line-height: 1.6;
+}
+
+.footer-page .contact-info address p:first-child i {
+  float: left;
+  margin: 0 20px 10px 2px;
+}
+
+.footer-page .contact-info address i {
+  margin-right: 20px;
+  color: #011e9e;
+}
+
+.footer-page .logo-footer {
+  margin-bottom: 30px;
+}
+
+.footer-page .logo-footer figure {
+  width: 80px;
+  height: 80px;
+}
+
+.footer-page .logo-footer span {
+  font-size: 2.7em;
+}
+
+.footer-page .copyright {
+  margin-top: 80px;
+  font-size: .9em;
+  color: #717171;
+}
+
+.footer-page .copyright span {
+  border-top: 1px solid #717171;
+  padding-top: 20px;
+}
+
+.footer-page .copyright p {
+  margin-top: 10px;
+}
+
+.footer-page .copyright i {
+  color: #011e9e;
+}
+
+.footer-page .footer-column {
+  padding-top: 80px;
+  color: #cccccc;
+  padding-left: 40px;
+}
+
+.footer-page .footer-column h2 {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.footer-page .footer-column a {
+  color: inherit;
+}
+
+.footer-page .footer-column ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.footer-page .footer-column li {
+  margin-bottom: 20px;
+}
+
+.footer-page .twit {
+  padding-left: 20px;
+  font-size: 0.9em;
+  position: relative;
+}
+
+.footer-page .twit::before {
+  font-family: FontAwesome;
+  content: '\f099';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.footer-page .twit span {
+  color: #f3e200;
+}
+
+.footer-page .twit .author {
+  text-align: right;
+}
+
+/*==========  section footer  ==========*/
 /*==========  user style  ==========*/
 /*==========  decoration  ==========*/
 .decoration-right {
