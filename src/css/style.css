@@ -5307,10 +5307,16 @@ button {
   padding: 10px 20px;
   font-weight: 600;
   text-align: center;
+  transition: .3s;
 }
 
 .btn-light {
   background-color: #fff;
+}
+
+.btn-light:hover {
+  color: #f3e200;
+  background-color: #011e9e;
 }
 
 .btn-darken {
@@ -5321,6 +5327,26 @@ button {
 
 .btn-darken:hover {
   color: #ffffff;
+}
+
+.nav-arrow {
+  font-size: 2.7em;
+  margin-top: 60px;
+}
+
+.nav-arrow a {
+  cursor: pointer;
+  transition: .3s;
+}
+
+.nav-arrow a:hover {
+  color: #f3e200;
+}
+
+.nav-arrow span {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0 10px;
 }
 
 input,
@@ -5358,6 +5384,7 @@ h2 {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  min-height: 1080px;
 }
 
 .page-header::after {
@@ -5597,8 +5624,9 @@ h2 {
   background-color: #fff;
   background-image: url("../img/section-1.png");
   background-repeat: no-repeat;
-  background-position: 25px 170px;
+  background-position: 7% 80%;
   padding: 50px 0 140px;
+  background-size: 40%;
 }
 
 .section-name {
@@ -5845,7 +5873,11 @@ h2.section-name-03 {
 /*==========  section three  ==========*/
 /*==========  section four  ==========*/
 .shop {
-  padding: 50px 0 100px;
+  padding: 50px 0 70px;
+}
+
+.shop .shop-carousel figure img {
+  width: 100%;
 }
 
 .shop-nav {
@@ -5855,11 +5887,24 @@ h2.section-name-03 {
 
 .shop-nav li {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 25px;
+  position: relative;
 }
 
 .shop-nav li:last-child {
   margin-right: 0;
+}
+
+.shop-nav li:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #f3e200;
+  border-radius: 50%;
+  left: -17px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .shop-nav li a {
@@ -5979,8 +6024,22 @@ h2.section-name-04 {
   background-color: #fff;
 }
 
+.blog .post {
+  box-shadow: 5px 5px 0 0 #f3e200;
+  transition: .5s;
+}
+
+.blog .post:hover {
+  box-shadow: 10px 15px 0 0 #f3e200, 1px 1px 2px 2px rgba(0, 0, 0, 0.09), 10px 10px 2px 2px rgba(0, 0, 0, 0.03);
+  transform: translateY(-5px);
+}
+
 .blog-header {
   background-color: black;
+}
+
+.blog-carousel .owl-stage-outer {
+  min-height: 500px;
 }
 
 .blog .section-name span {
@@ -5988,7 +6047,7 @@ h2.section-name-04 {
 }
 
 .blog .section-name h2.section-name-05 {
-  top: 27%;
+  top: 20%;
   left: 36%;
   bottom: auto;
   background-color: black;
@@ -5997,6 +6056,16 @@ h2.section-name-04 {
 
 .blog .section-name .section-description-05 {
   margin-top: 40px;
+  color: #fff;
+}
+
+.blog-nav span {
+  font-size: 1em;
+  color: #fff;
+  font-weight: 300;
+}
+
+.blog-nav a {
   color: #fff;
 }
 
@@ -6018,7 +6087,7 @@ h2.section-name-04 {
 }
 
 .blog-text {
-  padding: 15px 40px;
+  padding: 15px 35px;
 }
 
 .blog-text .post-theme {
@@ -6029,13 +6098,34 @@ h2.section-name-04 {
 
 .blog-text .post-header {
   font-weight: 900;
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 /*==========  section five  ==========*/
 /*==========  section six  ==========*/
 .team {
   padding: 100px 0;
+}
+
+.team-nav {
+  font-size: 2.7em;
+  margin-top: 60px;
+}
+
+.team-nav a {
+  cursor: pointer;
+  transition: .3s;
+}
+
+.team-nav a:hover {
+  color: #f3e200;
+}
+
+.team-nav span {
+  font-size: 1em;
+  font-weight: 300;
+  color: #717171;
+  margin: 0 10px;
 }
 
 .team figure {
@@ -6081,7 +6171,7 @@ h2.section-name-04 {
 
 h2.section-name-06 {
   bottom: auto;
-  top: 48%;
+  top: 34%;
   left: 40%;
 }
 
@@ -6096,8 +6186,34 @@ h2.section-name-06 {
   padding: 50px 0;
 }
 
+.partners-container {
+  position: relative;
+}
+
+.partners-nav {
+  font-size: 1.1em;
+}
+
+.partners-nav a {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.partners-nav a:first-child {
+  left: -5%;
+}
+
+.partners-nav a:last-child {
+  right: -2%;
+}
+
 .partners figure {
   margin: 0;
+}
+
+.partners figure img {
+  margin: 0 auto;
 }
 
 /*==========  section seven  ==========*/
@@ -6377,6 +6493,14 @@ h2.section-name-06 {
 
 button.active {
   background-image: url("../img/slider-selected-darken.png") !important;
+}
+
+.fix-height-overflow-carousel {
+  padding-top: 5px;
+}
+
+.blog-carousel .owl-stage-outer {
+  padding-top: 5px;
 }
 
 /*==========  Desktop First  ==========*/

@@ -307,59 +307,75 @@
 					<li><a href="#">Best Selling</a></li>
 					<li><a href="#">Sale Products</a></li>
 				</ul>
-				<div class="col">
-					<div class="shop-item">
-						<div class="shop-item-media">
-							<figure><img src="img/shop-1.png" alt=""></figure>
-							<div class="shop-item-about t-a">
-								<a href="#" class="btn btn-light">Add to cart</a><a href="" class="btn btn-light">More...</a>
+				<div class="row owl-carousel shop-carousel">
+					<div class="col">
+						<div class="shop-item">
+							<div class="shop-item-media">
+								<figure><img src="img/shop-1.png" alt=""></figure>
+								<div class="shop-item-about t-a">
+									<a href="#" class="btn btn-light">Add to cart</a><a href="" class="btn btn-light">More...</a>
+								</div>
 							</div>
-						</div>
-						<div class="shop-item-text">
-							<p>Sony Xplod Speakers</p>
-							<p class="price">$630.00</p>
+							<div class="shop-item-text">
+								<p>Sony Xplod Speakers</p>
+								<p class="price">$630.00</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col">
-					<div class="shop-item">
-						<div class="shop-item-media">
-							<figure><img src="img/shop-2.png" alt=""></figure>
-							<div class="shop-item-about t-a">
-								<a href="#" class="btn btn-light">Add to cart</a><a href="" class="btn btn-light">More...</a>
+					<div class="col">
+						<div class="shop-item">
+							<div class="shop-item-media">
+								<figure><img src="img/shop-2.png" alt=""></figure>
+								<div class="shop-item-about t-a">
+									<a href="#" class="btn btn-light">Add to cart</a><a href="" class="btn btn-light">More...</a>
+								</div>
 							</div>
-						</div>
-						<div class="shop-item-text">
-							<p>Car accessory</p>
-							<p class="price">$130.00</p>
+							<div class="shop-item-text">
+								<p>Car accessory</p>
+								<p class="price">$130.00</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col">
-					<div class="shop-item">
-						<div class="shop-item-media">
-							<figure><img src="img/shop-3.png" alt=""></figure>
-							<div class="shop-item-about t-a">
-								<a href="#" class="btn btn-light">Add to cart</a><a href="" class="btn btn-light">More...</a>
+					<div class="col">
+						<div class="shop-item">
+							<div class="shop-item-media">
+								<figure><img src="img/shop-3.png" alt=""></figure>
+								<div class="shop-item-about t-a">
+									<a href="#" class="btn btn-light">Add to cart</a><a href="" class="btn btn-light">More...</a>
+								</div>
+							</div>
+							<div class="shop-item-text">
+								<p>Car Charger</p>
+								<p class="price">$167.00</p>
+							</div>
+						</div> 
+					</div>
+					<div class="col">
+						<div class="shop-item">
+							<div class="shop-item-media">
+								<figure><img src="img/shop-4.png" alt=""></figure>
+								<div class="shop-item-about t-a">
+									<a href="#" class="btn btn-light">Add to cart</a><a href="" class="btn btn-light">More...</a>
+								</div>
+							</div>
+							<div class="shop-item-text">
+								<p>Car-Accessories</p>
+								<p class="price">$99.00</p>
 							</div>
 						</div>
-						<div class="shop-item-text">
-							<p>Car Charger</p>
-							<p class="price">$167.00</p>
-						</div>
-					</div> 
-				</div>
-				<div class="col">
-					<div class="shop-item">
-						<div class="shop-item-media">
-							<figure><img src="img/shop-4.png" alt=""></figure>
-							<div class="shop-item-about t-a">
-								<a href="#" class="btn btn-light">Add to cart</a><a href="" class="btn btn-light">More...</a>
+					</div>
+					<div class="col">
+						<div class="shop-item">
+							<div class="shop-item-media">
+								<figure><img src="img/shop-4.png" alt=""></figure>
+								<div class="shop-item-about t-a">
+									<a href="#" class="btn btn-light">Add to cart</a><a href="" class="btn btn-light">More...</a>
+								</div>
 							</div>
-						</div>
-						<div class="shop-item-text">
-							<p>Car-Accessories</p>
-							<p class="price">$99.00</p>
+							<div class="shop-item-text">
+								<p>Car-Accessories</p>
+								<p class="price">$99.00</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -369,35 +385,44 @@
 	<section class="blog">
 		<div class="container">
 			<div class="row">
-				<div class="col-4">
+				<div class="col-4 fix-height-overflow-carousel">
 					<div class="blog-wrapper blog-header">
 						<div class="section-name">
 							<span>05</span>
 							<h2 class="section-name-05">Blog update</h2>
 							<p class="section-description-05">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, alias quaerat. Optio, nesciunt sunt minus nihil.</p>
+							<div class="nav-arrow blog-nav">
+								<a href="#prev" class="blog-prev"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
+								<span>/</span>
+								<a href="#next" class="blog-next"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
-					<div class="blog-wrapper p-0">
-						<div class="blog-media">
-							<figure><img src="img/blog.png" alt=""></figure>
+				<div class="col-8">
+					<div class="row blog-carousel owl-carousel">
+						<div class="col">
+							<div class="blog-wrapper post p-0">
+								<div class="blog-media">
+									<figure><img src="img/blog.png" alt=""></figure>
+								</div>
+								<div class="blog-text">
+									<p class="post-theme">Car service</p>
+									<p class="post-header">Problems solved with an automatic gearbox</p>
+								</div>
+							</div>
 						</div>
-						<div class="blog-text">
-							<p class="post-theme">Car service</p>
-							<p class="post-header">Problems solved with an automatic gearbox</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="blog-wrapper">
-						<div class="blog-text p-0">
-							<p class="post-theme">Car Turning</p>
-							<p class="post-header">Best resource for Automotive repair Advice</p>
-						</div>
-						<div class="post-text">
-							<p>Lorem ipsum dolor sit amet consec, adipisicing elit. At consectetur similique provident earum incidunt debitis labo!</p>
-							<p>Lorem ipsum dolor sit amet consrses adipisicing elit. Perferendis ad... </p>
+						<div class="col">
+							<div class="blog-wrapper post">
+								<div class="blog-text p-0">
+									<p class="post-theme">Car Turning</p>
+									<p class="post-header">Best resource for Automotive repair Advice</p>
+								</div>
+								<div class="post-text">
+									<p>Lorem ipsum dolor sit amet consec, adipisicing elit. At consectetur similique provident earum incidunt debitis labo!</p>
+									<p>Lorem ipsum dolor sit amet consrses adipisicing elit. Perferendis ad... </p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -413,152 +438,182 @@
 							<span>06</span>
 							<h2 class="section-name-06">Our team</h2>
 							<p class="section-description-06">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, alias quaerat.</p>
+							<div class="team-nav nav-arrow">
+								<a href="#prev" class="team-prev"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
+								<span>/</span>
+								<a href="#next" class="team-next"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-3">
-					<figure>
-						<img src="img/team-1.png" alt="">
-						<figcaption>
-							<p class="name">Adam Sanderson</p>
-							<p class="profession">Main Mecharic</p>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-3">
-					<figure>
-						<img src="img/team-2.png" alt="">
-						<figcaption>
-							<p class="name">Ben Jonson</p>
-							<p class="profession">Mecharic</p>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-3">
-					<figure>
-						<img src="img/team-3.png" alt="">
-						<figcaption>
-							<p class="name">Bryan Kennedy</p>
-							<p class="profession">Mecharic</p>
-						</figcaption>
-					</figure>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="partners">
-		<div class="container">
-			<div class="row align-center t-a">
-				<div class="col">
-					<figure><img src="img/partner-1.png" alt=""></figure>
-				</div>
-				<div class="col">
-					<figure><img src="img/partner-2.png" alt=""></figure>
-				</div>
-				<div class="col">
-					<figure><img src="img/partner-3.png" alt=""></figure>
-				</div>
-				<div class="col">
-					<figure><img src="img/partner-4.png" alt=""></figure>
-				</div>
-				<div class="col">
-					<figure><img src="img/partner-5.png" alt=""></figure>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="gift subscribe">
-		<div class="container">
-			<div class="row align-center">
-				<div class="col-4 subscribe-social">
-					<p class="h-gift">Newsletter</p>
-					<p><span>Subscribe</span> to our monthly newsletter</p>
-					<div class="fallow-social align-center">
-						<p>Fallow us</p>
-						<ul>
-							<li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-							<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							<li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-							<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-							<li><a href=""><i class="fa fa-vk" aria-hidden="true"></i></a></li>
-							<li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-						</ul>
+				<div class="col-9">
+					<div class="row owl-carousel team-carousel">
+						<div class="col">
+							<figure>
+								<img src="img/team-1.png" alt="">
+								<figcaption>
+									<p class="name">Adam Sanderson</p>
+									<p class="profession">Main Mecharic</p>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col">
+							<figure>
+								<img src="img/team-2.png" alt="">
+								<figcaption>
+									<p class="name">Ben Jonson</p>
+									<p class="profession">Mecharic</p>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col">
+							<figure>
+								<img src="img/team-3.png" alt="">
+								<figcaption>
+									<p class="name">Bryan Kennedy</p>
+									<p class="profession">Mecharic</p>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col">
+							<figure>
+								<img src="img/team-1.png" alt="">
+								<figcaption>
+									<p class="name">Adam Sanderson</p>
+									<p class="profession">Main Mecharic</p>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col">
+							<figure>
+								<img src="img/team-2.png" alt="">
+								<figcaption>
+									<p class="name">Ben Jonson</p>
+									<p class="profession">Mecharic</p>
+								</figcaption>
+							</figure>
+						</div>
 					</div>
 				</div>
-				<div class="col-8 d-flex justify-end"><input type="text" name="" id="" placeholder="Enter your email here"><a href="" class="btn btn-darken">subscribe</a></div>
+			</div>
+		</section>
+		<section class="partners">
+			<div class="container partners-container">
+				<div class="row align-center t-a owl-carousel partners-carousel">
+					<div class="col">
+						<figure><img src="img/partner-1.png" alt=""></figure>
+					</div>
+					<div class="col">
+						<figure><img src="img/partner-2.png" alt=""></figure>
+					</div>
+					<div class="col">
+						<figure><img src="img/partner-3.png" alt=""></figure>
+					</div>
+					<div class="col">
+						<figure><img src="img/partner-4.png" alt=""></figure>
+					</div>
+					<div class="col">
+						<figure><img src="img/partner-5.png" alt=""></figure>
+					</div>
+				</div>
+				<div class="partners-nav">
+					<a href="#prev" class="btn btn-light partners-prev"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
+					<a href="#next" class="btn btn-light partners-next"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</section>
+		<section class="gift subscribe">
+			<div class="container">
+				<div class="row align-center">
+					<div class="col-4 subscribe-social">
+						<p class="h-gift">Newsletter</p>
+						<p><span>Subscribe</span> to our monthly newsletter</p>
+						<div class="fallow-social align-center">
+							<p>Fallow us</p>
+							<ul>
+								<li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+								<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href=""><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+								<li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-8 d-flex justify-end"><input type="text" name="" id="" placeholder="Enter your email here"><a href="" class="btn btn-darken">subscribe</a></div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer-page">
+		<div class="container">
+			<div class="row">
+				<div class="col-4 contact-info">
+					<div class="logo logo-footer">
+						<a href="#">
+							<figure><img src="img/logo.png" alt=""></figure>
+							<span class="logo-description">Carle</span>
+						</a>
+					</div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos unde quidem sequi recusandae repellat nam, ex earum eum fugiat, dolorem sed. Fugiat, rem quidem? Eveniet, distinctio cupiditate! Odit, nisi aspernatur.</p>
+					<address>
+						<p><i class="fa fa-map-marker" aria-hidden="true"></i>51/218 Dinh Cong, Hoang Mai St. <br> Hanoi, Viet Nam.</p>
+						<p><a href="tel:+012388890999"><i class="fa fa-phone" aria-hidden="true"></i><strong>+0123-88-89-099</strong></a></p>
+						<p><a href="mailto:contact@carle.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>contact@carle.com</a></p>
+						<p><a href="#"><i class="fa fa-globe" aria-hidden="true"></i>www.mysite.ru</a></p>
+					</address>
+					<div class="copyright">
+						<span>© Copyright 2018</span>
+						<p> Designed with <i class="fa fa-heart" aria-hidden="true"></i> by nooTheme</p>
+					</div>
+				</div>
+				<div class="col-3 footer-column">
+					<h2>Best Services</h2>
+					<ul>
+						<li><a href="">Suspension Repair</a></li>
+						<li><a href="">Clutch Repair</a></li>
+						<li><a href="">Cambelt Replacement</a></li>
+						<li><a href="">Fuel Service</a></li>
+						<li><a href="">Safety Check</a></li>
+						<li><a href="">Packaged Car Service</a></li>
+						<li><a href="">Inspection</a></li>
+						<li><a href="">Brakes</a></li>
+						<li><a href="">Wheel Balancing</a></li>
+					</ul>
+				</div>
+				<div class="col-2 footer-column">
+					<h2>Vihicle</h2>
+					<ul>
+						<li><a href="">Audi</a></li>
+						<li><a href="">BMW</a></li>
+						<li><a href="">Volvo</a></li>
+						<li><a href="">Honda</a></li>
+						<li><a href="">Toyota</a></li>
+						<li><a href="">Mercedes</a></li>
+						<li><a href="">Ford</a></li>
+						<li><a href="">Hyundai</a></li>
+					</ul>
+				</div>
+				<div class="col-3 footer-column">
+					<h2>Latest Tweets</h2>
+					<div class="twit">
+						<p><span>@Carle</span> Sweets and Backers Wordpress Theme' on EnvatoMarket</p>
+						<p class="author">- Thursday April 9, 2018</p>
+					</div>
+					<div class="twit">
+						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.?</p>
+						<p class="author">- Thursday April 2, 2018</p>
+					</div>
+					<div class="twit">
+						<p>Sweets and Backers Wordpress Theme' on <span>@EnvatoMarket</span> http://t.co/we8m81zKf0</p>
+						<p class="author">- Thursday April 1, 2018</p>
+					</div>
+				</div>
 			</div>
 		</div>
-	</section>
-</main>
-<footer class="footer-page">
-	<div class="container">
-		<div class="row">
-			<div class="col-4 contact-info">
-				<div class="logo logo-footer">
-					<a href="#">
-						<figure><img src="img/logo.png" alt=""></figure>
-						<span class="logo-description">Carle</span>
-					</a>
-				</div>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos unde quidem sequi recusandae repellat nam, ex earum eum fugiat, dolorem sed. Fugiat, rem quidem? Eveniet, distinctio cupiditate! Odit, nisi aspernatur.</p>
-				<address>
-					<p><i class="fa fa-map-marker" aria-hidden="true"></i>51/218 Dinh Cong, Hoang Mai St. <br> Hanoi, Viet Nam.</p>
-					<p><a href="tel:+012388890999"><i class="fa fa-phone" aria-hidden="true"></i><strong>+0123-88-89-099</strong></a></p>
-					<p><a href="mailto:contact@carle.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>contact@carle.com</a></p>
-					<p><a href="#"><i class="fa fa-globe" aria-hidden="true"></i>www.mysite.ru</a></p>
-				</address>
-				<div class="copyright">
-					<span>© Copyright 2018</span>
-					<p> Designed with <i class="fa fa-heart" aria-hidden="true"></i> by nooTheme</p>
-				</div>
-			</div>
-			<div class="col-3 footer-column">
-				<h2>Best Services</h2>
-				<ul>
-					<li><a href="">Suspension Repair</a></li>
-					<li><a href="">Clutch Repair</a></li>
-					<li><a href="">Cambelt Replacement</a></li>
-					<li><a href="">Fuel Service</a></li>
-					<li><a href="">Safety Check</a></li>
-					<li><a href="">Packaged Car Service</a></li>
-					<li><a href="">Inspection</a></li>
-					<li><a href="">Brakes</a></li>
-					<li><a href="">Wheel Balancing</a></li>
-				</ul>
-			</div>
-			<div class="col-2 footer-column">
-				<h2>Vihicle</h2>
-				<ul>
-					<li><a href="">Audi</a></li>
-					<li><a href="">BMW</a></li>
-					<li><a href="">Volvo</a></li>
-					<li><a href="">Honda</a></li>
-					<li><a href="">Toyota</a></li>
-					<li><a href="">Mercedes</a></li>
-					<li><a href="">Ford</a></li>
-					<li><a href="">Hyundai</a></li>
-				</ul>
-			</div>
-			<div class="col-3 footer-column">
-				<h2>Latest Tweets</h2>
-				<div class="twit">
-					<p><span>@Carle</span> Sweets and Backers Wordpress Theme' on EnvatoMarket</p>
-					<p class="author">- Thursday April 9, 2018</p>
-				</div>
-				<div class="twit">
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.?</p>
-					<p class="author">- Thursday April 2, 2018</p>
-				</div>
-				<div class="twit">
-					<p>Sweets and Backers Wordpress Theme' on <span>@EnvatoMarket</span> http://t.co/we8m81zKf0</p>
-					<p class="author">- Thursday April 1, 2018</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
-<body>
-	<script src="js/scripts.min.js"></script>
-</body>
-
-</html>
+	</footer>
+	<body>
+		<script src="js/scripts.min.js"></script>
+	</body>
+	
+	</html>
