@@ -5341,7 +5341,7 @@ html {
 /* Styles for dialog window */
 #small-dialog {
   background: white;
-  padding: 20px 5px 5px;
+  padding: 20px 40px 40px 5px;
   text-align: left;
   max-width: 60%;
   margin: 40px auto;
@@ -5601,7 +5601,7 @@ h2 {
 }
 
 .page-header {
-  height: 990px;
+  height: 120vh;
   width: 100%;
   background-color: #011e9e;
   background-image: url("../img/header.jpg");
@@ -5609,6 +5609,7 @@ h2 {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  min-height: 990px;
 }
 
 .page-header::after {
@@ -5729,7 +5730,7 @@ h2 {
 }
 
 .top-nav-bar li {
-  margin: 0 25px;
+  margin-right: 40px;
   position: relative;
   transition: 3s;
 }
@@ -6651,7 +6652,7 @@ h2.section-name-06 {
 
 .footer-page .twit::before {
   font-family: FontAwesome;
-  content: '\f099';
+  content: '\f118';
   position: absolute;
   top: 0;
   left: 0;
