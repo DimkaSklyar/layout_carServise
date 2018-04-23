@@ -126,13 +126,11 @@ h2
 	color: #a7a7a7
 	& a
 		color: #a7a7a7
+		&:hover
+			color: #fff
+			cursor: pointer
 	& i
 		margin-right: 10px
-	&:hover
-		color: #fff
-		cursor: pointer
-	&:hover a
-		color: #fff
 
 .top-phone
 	a
@@ -831,7 +829,24 @@ h2.section-name-06
 			color: $color-2
 		.author
 			text-align: right
+
 /*==========  section footer  ==========*/
+/*==========  section single  ==========*/
+
+.single-page
+	.top-nav-bar
+		background-color: rgba($color-2,.8)
+		.top-menu
+			background-color: inherit
+			li
+				a
+				&::before
+					background-color: $color-1
+	.top-contact
+		a
+			&:hover
+				color: $color-1
+/*==========  section single  ==========*/
 /*==========  user style  ==========*/
 /*==========  decoration  ==========*/
 .decoration-right

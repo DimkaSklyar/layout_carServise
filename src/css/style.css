@@ -5643,26 +5643,19 @@ h2 {
   color: #a7a7a7;
 }
 
+.top-phone a:hover,
+    .top-mail a:hover,
+    .top-work-time a:hover,
+    .top-find-us a:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
 .top-phone i,
   .top-mail i,
   .top-work-time i,
   .top-find-us i {
   margin-right: 10px;
-}
-
-.top-phone:hover,
-  .top-mail:hover,
-  .top-work-time:hover,
-  .top-find-us:hover {
-  color: #fff;
-  cursor: pointer;
-}
-
-.top-phone:hover a,
-  .top-mail:hover a,
-  .top-work-time:hover a,
-  .top-find-us:hover a {
-  color: #fff;
 }
 
 .top-phone a {
@@ -6667,6 +6660,24 @@ h2.section-name-06 {
 }
 
 /*==========  section footer  ==========*/
+/*==========  section single  ==========*/
+.single-page .top-nav-bar {
+  background-color: rgba(243, 226, 0, 0.8);
+}
+
+.single-page .top-nav-bar .top-menu {
+  background-color: inherit;
+}
+
+.single-page .top-nav-bar .top-menu li::before {
+  background-color: #011e9e;
+}
+
+.single-page .top-contact a:hover {
+  color: #011e9e;
+}
+
+/*==========  section single  ==========*/
 /*==========  user style  ==========*/
 /*==========  decoration  ==========*/
 .decoration-right {
