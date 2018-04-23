@@ -6460,7 +6460,7 @@ h2.section-name-06 {
 }
 
 .partners-nav a:last-child {
-  right: -2%;
+  right: calc(-5% + 15px);
 }
 
 .partners figure {
@@ -6475,6 +6475,22 @@ h2.section-name-06 {
 /*==========  section eight  ==========*/
 .subscribe {
   background: #f3e200 url("../img/section-7.jpg");
+}
+
+.subscribe .h-gift {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #011e9e;
+}
+
+.subscribe p {
+  line-height: 1;
+  font-size: 1.3em;
+}
+
+.subscribe p span {
+  font-weight: bold;
   padding: 0;
 }
 
@@ -6699,7 +6715,7 @@ h2.section-name-06 {
 
 .skitter .info_slide_dots {
   position: absolute;
-  bottom: 25%;
+  bottom: 30%;
   z-index: 151;
   padding: 5px 0 5px 5px;
   border-radius: 50px;

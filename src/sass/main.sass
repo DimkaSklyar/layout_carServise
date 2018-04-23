@@ -700,7 +700,7 @@ h2.section-name-06
 			&:first-child
 				left: -5%
 			&:last-child
-				right: -2%
+				right: calc(-5% + 15px)
 	figure
 		margin: 0
 		img
@@ -709,7 +709,17 @@ h2.section-name-06
 /*==========  section eight  ==========*/
 .subscribe
 	background: $color-2 url('../img/section-7.jpg')
-	padding: 0
+	.h-gift
+		font-size: 2.5em
+		text-transform: uppercase
+		font-weight: 600
+		color: $color-1
+	p
+		line-height: 1
+		font-size: 1.3em
+		span
+			font-weight: bold
+			padding: 0
 	&-social
 		padding: 100px 0
 		position: relative
@@ -863,7 +873,7 @@ h2.section-name-06
 		z-index: 0
 .skitter .info_slide_dots
 	position: absolute
-	bottom: 25%
+	bottom: 30%
 	z-index: 151
 	padding: 5px 0 5px 5px
 	border-radius: 50px
