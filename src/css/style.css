@@ -5601,7 +5601,7 @@ h2 {
 }
 
 .page-header {
-  height: 120vh;
+  height: 990px;
   width: 100%;
   background-color: #011e9e;
   background-image: url("../img/header.jpg");
@@ -5609,7 +5609,6 @@ h2 {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  min-height: 990px;
 }
 
 .page-header::after {
@@ -5799,7 +5798,7 @@ h2 {
 
 .order {
   background-color: #fff;
-  margin-top: 43vh;
+  margin-top: 300px;
   text-align: center;
   box-shadow: 15px 20px 0 0 #f3e200, 1px 1px 2px 2px rgba(0, 0, 0, 0.09);
   transition: .5s;
