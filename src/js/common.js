@@ -1,5 +1,26 @@
 $(document).ready(function() {
 
+// mobile menu
+var touch = $('#touch-menu');
+    var menu = $('.top-menu');
+ 
+    $(touch).on('click', function(e) {
+        e.preventDefault();
+        menu.slideToggle();
+    });
+    $(window).resize(function(){
+        var w = $(window).width();
+        if(w > 760 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+        }
+    });
+
+$(document).ready(function(){
+	$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+		$(this).toggleClass('open');
+	});
+});
+// mobile menu
 $(function() {
   $('.skitter-large').skitter({
 		interval: 5000,

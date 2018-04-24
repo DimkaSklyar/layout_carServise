@@ -120,7 +120,7 @@ h2
 	overflow: hidden
 	min-height: 990px
 	+media-breakpoint-down(lg)
-		min-height: 900px
+		min-height: 850px
 	&::after
 		content: ''
 		position: absolute
@@ -140,6 +140,9 @@ h2
 	display: inline-block
 	padding: 15px 0
 	color: #a7a7a7
+	+media-breakpoint-down(md)
+		display: block
+		padding: 5px 0
 	& a
 		color: #a7a7a7
 		&:hover
@@ -152,18 +155,27 @@ h2
 	a
 		border-right: 1px solid #a7a7a7
 		padding-right: 10px
+		+media-breakpoint-down(md)
+			border: none
 
 .top-work-time
 	a
 		border-right: 1px solid #a7a7a7
 		padding: 0 10px
+		+media-breakpoint-down(md)
+			border: none
+			padding: 0
 
 .top-mail,
 .top-find-us
 	margin-left: 10px
+	+media-breakpoint-down(md)
+		margin: 0
 
 .top-location
 	display: flex
+	+media-breakpoint-down(md)
+		display: block
 
 .top-menu
 	background-color: #fff
@@ -186,11 +198,17 @@ h2
 		font-weight: 600
 		font-size: 24px
 		margin-left: 10px
+		+media-breakpoint-down(md)
+			display: none
 
 .top-nav-bar
 	display: flex
 	align-items: baseline
 	background-color: #fff
+	.mobile-menu-wrapper
+		display: none
+		+media-breakpoint-down(sm)
+			display: block
 	.top-menu
 		display: flex
 		margin: 0
@@ -200,6 +218,8 @@ h2
 		& > li
 			margin-right: 40px
 			transition: 3s
+			+media-breakpoint-down(md)
+				margin-right: 30px
 			& > ul
 				position: absolute
 				display: none
@@ -246,6 +266,7 @@ h2
 	height: calc(100vh - 144px)
 	.slogan
 		text-transform: uppercase
+		font-size: .8em
 		&-big
 			color: $color-2
 			font-size: 10em
@@ -271,7 +292,7 @@ h2
 	box-shadow: 15px 20px 0 0 #f3e200, 1px 1px 2px 2px rgba(0,0,0,.09)
 	transition: .5s
 	+media-breakpoint-down(lg)
-		margin-top: 200px
+		margin-top: 150px
 	&:hover
 		box-shadow: -15px -20px 0 0 #f3e200, 1px 1px 2px 2px rgba(0,0,0,.09),10px 10px 2px 2px rgba(0,0,0,.03)
 		transform: translateY(-5px)
@@ -299,6 +320,7 @@ h2
 	position: absolute
 	top: 0
 	width: 100%
+	min-height: 1080px
 /*==========  section slider  ==========*/
 
 /*==========  section one  ==========*/
@@ -1010,6 +1032,7 @@ h2.section-name-06
 		right: 0
 		background-color: rgba($color-1,.6)
 		z-index: 0
+
 .skitter .info_slide_dots
 	position: absolute
 	bottom: 30%
