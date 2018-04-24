@@ -16,7 +16,6 @@ $(function() {
 
 		overflowY: 'auto',
 
-		closeBtnInside: true,
 		preloader: false,
 		
 		midClick: true,

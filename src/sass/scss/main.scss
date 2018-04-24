@@ -1,5 +1,5 @@
 /* Styles for dialog window */
-#small-dialog {
+#small-dialog,#small-dialog-map {
 	background: white;
 	padding: 20px 40px 40px 5px;
 	text-align: left;
@@ -10,7 +10,15 @@
 #small-dialog img{
 	width: 100%;
 }
+#small-dialog-map {
+	padding: 5px;
+}
 
+.mfp-close-btn-in .mfp-close{
+	top: -40px;
+	right: -15px;
+	color: #fff
+}
 /**
  * Fade-zoom animation for first dialog
  */

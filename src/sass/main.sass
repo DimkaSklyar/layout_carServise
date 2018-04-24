@@ -6,9 +6,11 @@
 body
 	font-family: 'Rubik', sans-serif
 	font-size: 0.95em
-
 .justify-between
 	justify-content: space-between
+
+.width-100
+	width: 100%
 
 .justify-end
 	justify-content: flex-end
@@ -180,30 +182,49 @@ h2
 		margin: 0
 		padding: 0
 		list-style: none
-	li
-		margin-right: 40px
 		position: relative
-		transition: 3s
-		&:last-child
-			margin-right: 20px
-		&::before
-			content: ''
-			position: absolute
-			width: 6px
-			height: 6px
-			border-radius: 50%
-			background-color: $color-2
-			top: 50%
-			left: -15px
-			transform: translateY(-50%)
-			opacity: 0
-			transition: opacity .2s
-		&:hover::before
-			opacity: 1
-		a
-			display: block
-			text-transform: uppercase
-			font-weight: 600
+		& > li
+			margin-right: 40px
+			transition: 3s
+			& > ul
+				position: absolute
+				display: none
+				width: calc(100% - 115px)
+				top: 20px
+				left: 130px
+				padding-top: 60px
+				background-color: #fff
+				list-style: none
+				padding-bottom: 20px
+				columns: 2
+				& > li
+					margin-bottom: 20px
+			&:hover ul
+				display: block
+				z-index: 99
+			&:hover .top-nav-bar
+				height: 400px
+			&:last-child
+				margin-right: 20px
+			a
+				display: block
+				text-transform: uppercase
+				font-weight: 600
+				position: relative
+				&::before
+					content: ''
+					position: absolute
+					width: 6px
+					height: 6px
+					border-radius: 50%
+					background-color: $color-2
+					top: 50%
+					left: -15px
+					transform: translateY(-50%)
+					opacity: 0
+					transition: opacity .2s
+				&:hover::before
+					opacity: 1
 
 .slogan-align
 	display: flex
@@ -678,7 +699,7 @@ h2.section-name-04
 
 h2.section-name-06
 	bottom: auto
-	top: 34%
+	top: 29%
 	left: 40%
 .section-description-06
 	margin-top: -30px
@@ -835,17 +856,86 @@ h2.section-name-06
 
 .single-page
 	.top-nav-bar
-		background-color: rgba($color-2,.8)
+		background-color: #fff23f
 		.top-menu
 			background-color: inherit
 			li
+				& > ul
+					background-color: #fff23f
 				a
-				&::before
-					background-color: $color-1
+					&::before
+						background-color: $color-1
 	.top-contact
 		a
 			&:hover
 				color: $color-1
+.main-content
+	h1
+		text-transform: uppercase
+		padding: 10px 0
+		text-align: center
+		font-size: 4em
+		color: #344bb0
+		font-weight: 900
+		line-height: 1
+		padding: 40px 0
+	& + .row
+		padding-bottom: 100px
+		figure
+			text-align: center
+			img
+				width: 90%
+		img
+			width: 90%
+			margin-bottom: 40px
+			box-shadow: 10px 15px 0 0 #f3e200, 1px 1px 2px 2px rgba(0,0,0,.09)
+			transition: .3s
+			&:hover
+				box-shadow: -10px -10px 0 0 #f3e200, 1px 1px 2px 2px rgba(0,0,0,.09),10px 10px 2px 2px rgba(0,0,0,.03)
+				transform: translateY(-5px)
+		p
+			margin-bottom: 30px
+			i
+				margin-right: 10px
+		ul
+			margin-bottom: 30px
+			li
+				margin-bottom: 10px
+		a
+			color: $color-1
+			&:hover
+				border-bottom: 1px dashed $color-1
+		.map
+			width: 100%
+			box-shadow: 10px 15px 0 0 #f3e200, 1px 1px 2px 2px rgba(0,0,0,.09)
+			transition: .3s
+			&:hover
+				box-shadow: -10px -10px 0 0 #f3e200, 1px 1px 2px 2px rgba(0,0,0,.09),10px 10px 2px 2px rgba(0,0,0,.03)
+		table
+			width: 100%
+			margin-top: 40px
+			margin-bottom: 20px
+			td
+				padding: 10px
+			th:last-child, td:last-child
+				text-align: left
+				width: 15%
+			tr:nth-child(odd):not(:first-child)
+				background-color: rgba($color-1,.1)
+			th
+				background-color: rgba($color-2,.7)
+				padding: 20px 10px
+				font-weight: 900
+		table#wrap
+			tr
+				background-color: #ffffff
+			tr:nth-child(3n+2):not(:first-child)
+				background-color: rgba($color-1,.1)
+
+.container-content
+	width: 960px
+	line-height: 1.8
+	font-size: 1.2em
 /*==========  section single  ==========*/
 /*==========  user style  ==========*/
 /*==========  decoration  ==========*/
@@ -931,3 +1021,28 @@ button.active
 .blog-carousel .owl-stage-outer
 	padding-top: 5px
 @import "media" // Always at the end
+
+
+
+
+.support-question
+	label
+		cursor: pointer
+		line-height: 1.7
+
+		&:hover
+			color: $color-1
+			border-bottom: 2px solid $color-1
+	input[type="checkbox"]
+		display: none
+		&:checked ~ .con
+			height: 200px
+	.con
+		height: 0
+		transition: .5s
+		overflow: hidden
+		p
+			font-size: 12px
+			margin-left: 20px
+			background-color: #fff
+	
