@@ -14,7 +14,7 @@
 <header class="page-header">
 	<div class="container position-up">
 		<div class="row justify-between">
-			<div class="col">
+			<div class="col-6 col-lg-5">
 				<div class="top-contact">
 					<div class="top-phone">
 						<a href="tel:+79189740946"><i class="fa fa-phone" aria-hidden="true"></i>+7 (918) 974-0-946</a>
@@ -24,7 +24,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col">
+			<div class="col-6 col-lg-7 ">
 				<div class="top-location justify-end">
 					<div class="top-work-time">
 						<a href="#">
@@ -107,8 +107,8 @@
 							<option value="ВАЗ">ВАЗ</option>
 							<option value="Калина">Калина</option>
 							<option value="Приора">Приора</option>
-							<textarea name="" id="" cols="30" rows="5" placeholder="Дополнительная информация..."></textarea>
 						</select>
+						<textarea name="" id="" cols="30" rows="5" placeholder="Дополнительная информация..."></textarea>
 					</form>
 					<button type="submit" form="form-order" class="btn btn-darken">Отправить</button>
 				</div>
@@ -187,12 +187,10 @@
 			<div class="row justify-between">
 				<div class="col-7 offset-2">
 					<p class="h-gift">Экономте с нами</p>
-					<p>Со специальными <span>Купонами </span>и еженедельными <span>Скидками</span></p>
+					<p class="d-lg-none d-xl-block">Со специальными <span>Купонами </span>и еженедельными <span>Скидками</span></p>
 				</div>
 				<div class="col-3 m-auto-0"><a href="#small-dialog" class="btn btn-light popup-with-zoom-anim">Подробнее</a></div>
-				<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
 				<div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-					<h1>Ваш купон</h1>
 					<img src="img/cupon.jpg" alt="">
 				</div>
 			</div>
@@ -313,23 +311,56 @@
 				</div>
 				<div class="col-6 support-question">
 					<ul>
-						<li><label for="check-1">Замена тормозных колодок: как понять, когда нужно ее произвести?</label><input type="checkbox" name="check-1" id="check-1">
+						<li>
+							<label for="check-1">Замена тормозных колодок: как понять, когда нужно ее произвести?</label>
+							<input type="checkbox" name="question" id="check-1">
 							<div class="con">
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ducimus aliquam atque cumque eius architecto ipsum fuga, nobis modi nulla blanditiis doloremque quasi aliquid? Excepturi quo odit recusandae tempore similique!</p>
+								<p>Как показывает практика, тормоза чаще всего подвержены износу. А учитывая тот факт, что дороги в нашей стране далеки от идеала, то и срок эксплуатации тормозной системы заметно снижается. Именно поэтому замена тормозных колодок является важной задачей для любого автовладельца.</p>
 							</div>
 						</li>
-						<li><a href="#">Замена тормозных колодок: как понять, когда нужно ее произвести?</a></li>
-						<li><a href="#">Какие сновные проблемы АКПП?</a></li>
-						<li><a href="#">Какие типы кузовного ремонта в нашем сервисе?</a></li>
-						<li><a href="#">Что нужно знать о двигателе?</a></li>
-						<li><a href="#">Что говорит о неисправности рычагов?</a></li>
+						<li>
+							<label for="check-2">Какие сновные проблемы АКПП?</label>
+							<input type="checkbox" name="question" id="check-2">
+							<div class="con">
+								<p>Одной из наиболее частых поломок автомобиля являются сложности с АКПП. Стоит отметить, что данный механизм является одним из ключевых узлов любого транспортного средства, и потому его некорректная работа может привести к появлению огромных проблем.</p>
+							</div>
+						</li>
+						<li>
+							<label for="check-3">Какие типы кузовного ремонта в нашем сервисе?</label>
+							<input type="checkbox" name="question" id="check-3">
+							<div class="con">
+								<p>Если вы ищете сервис, в котором профессиональные мастера по доступным ценам без накрутки выполнят весь спектр работ по кузовному ремонту, то, не раздумывая, обращайтесь к нам!</p>
+							</div>
+						</li>
+						<li>
+							<label for="check-4">Что нужно знать о двигателе?</label>
+							<input type="checkbox" name="question" id="check-4">
+							<div class="con">
+								<p>Двиигатель — устройство, преобразующее какой-либо вид энергии в механическую работу. Термин мотор заимствован в первой половине XIX века из немецкого языкаи преимущественно им называют электрические двигатели и двигатели внутреннего сгорания!</p>
+							</div>
+						</li>
+						<li>
+							<label for="check-5">Признаки неисправности сайлентблоков?</label>
+							<input type="checkbox" name="question" id="check-5">
+							<div class="con">
+								<p>Признаком того, что нужна замена задних сайлентблоков или передних, является неравномерный износ резины на колесах. Или при движении на высокой скорости машина может терять управляемость и кидаться в стороны.</p>
+							</div>
+						</li>
 					</ul>
 				</div>
 				<div class="col-6 support-more">
 					<p>Если вы столкнулись с некими сложностями, затрагивающими работоспособность вашего авто, обратитесь к нам, и вы получите не только информационные рекомендации касательно правильного ухода за «железным другом», а и грамотную помощь, и многообразие услуг профессиональных мастеров!</p>
 					<p>Если вы не нашли ответа на интересующий Вас вопрос, или у Вас возникли другие вопросы, можете задать вопрос с поможью формы обратной связи или же обратиться к нам по телефону.</p>
 					<div class="view">
-						<a href="" class="btn btn-darken">Вопрос/Ответ</a><a href="" class="view-all">Или задайте свой вопрос</a>
+						<a href="faq.html" class="btn btn-darken">Вопрос/Ответ</a><a href="#question-form" class="view-all popup-with-form">Или задайте свой вопрос</a>
+						<!-- form itself -->
+						<form id="question-form" class="white-popup-block mfp-hide">
+							<input type="text" name="" id="" placeholder="Имя">
+							<input type="email" name="" id="" placeholder="Email">
+							<textarea name="" id=""  rows="5" placeholder="Вопрос?"></textarea>
+							<button type="submit" form="form-order" class="btn btn-darken">Отправить</button>
+						</form>
+						<!-- form itself -->
 					</div>
 				</div>
 			</div>
@@ -338,7 +369,7 @@
 	<section class="team">
 		<div class="container">
 			<div class="row">
-				<div class="col-3">
+				<div class="col-xl-3 col-lg-4">
 					<div class="">
 						<div class="section-name" data-section-number="01">
 							<span>06</span>
@@ -352,7 +383,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-9">
+				<div class="col-xl-9 col-lg-7 offset-lg-1 offset-xl-0">
 					<div class="row owl-carousel team-carousel">
 						<div class="col">
 							<figure>
@@ -404,7 +435,7 @@
 			</div>
 		</section>
 		<section class="partners">
-			<div class="container partners-container">
+			<div class="container-fluid partners-container">
 				<div class="row align-center t-a owl-carousel partners-carousel">
 					<div class="col">
 						<figure><img src="img/partner-1.png" alt=""></figure>
@@ -422,18 +453,16 @@
 						<figure><img src="img/partner-5.png" alt=""></figure>
 					</div>
 				</div>
-				<div class="partners-nav">
 					<a href="#prev" class="btn btn-light partners-prev"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
 					<a href="#next" class="btn btn-light partners-next"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-				</div>
 			</div>
 		</section>
 		<section class="subscribe">
 			<div class="container">
 				<div class="row align-center">
-					<div class="col-4 subscribe-social">
+					<div class="col-xl-4 col-lg-5 subscribe-social">
 						<p class="h-gift">Свежие новости</p>
-						<p><span>Подпишись</span> на еженедельную рассылку</p>
+						<p class="d-xl-block d-lg-none"><span>Подпишись</span> на еженедельную рассылку</p>
 						<div class="fallow-social align-center">
 							<p>Соц. сети</p>
 							<ul>
@@ -446,7 +475,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-8 d-flex justify-end"><input type="text" name="" id="" placeholder="Введите свою электронную почту"><a href="" class="btn btn-darken">Подписаться</a></div>
+					<div class="col-xl-8 col-lg-7 d-flex justify-end"><input type="text" name="" id="" placeholder="Введите свою электронную почту"><a href="" class="btn btn-darken">Подписаться</a></div>
 				</div>
 			</div>
 		</section>
@@ -454,7 +483,7 @@
 	<footer class="footer-page">
 		<div class="container">
 			<div class="row">
-				<div class="col-4 contact-info">
+				<div class="col-xl-4 col-lg-5 contact-info">
 					<div class="logo logo-footer">
 						<a href="#">
 							<figure><img src="img/logo.png" alt=""></figure>
@@ -473,7 +502,7 @@
 						<p> Сделано с <i class="fa fa-heart" aria-hidden="true"></i></p>
 					</div>
 				</div>
-				<div class="col-3 footer-column">
+				<div class="col-xl-3 col-lg-3 footer-column">
 					<h2>Наши услуги</h2>
 					<ul>
 						<li><a href="service-1.html">Ремонт ходовой</a></li>
@@ -485,7 +514,7 @@
 						<li><a href="service-7.html">Замена тормозных колодок</a></li>
 					</ul>
 				</div>
-				<div class="col-2 footer-column">
+				<div class="col-xl-2 footer-column d-xl-block d-lg-none">
 					<h2>Авто</h2>
 					<ul>
 						<li>Audi</li>
@@ -498,7 +527,7 @@
 						<li>Hyundai</li>
 					</ul>
 				</div>
-				<div class="col-3 footer-column">
+				<div class="col-xl-3 col-lg-4 footer-column">
 					<h2>Отзывы о нас</h2>
 					<div class="twit">
 						<p><span>Спасибо</span>  магазину) товар привезли быстро) качество отменное)))</p>

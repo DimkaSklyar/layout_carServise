@@ -46,6 +46,8 @@ button
 	border: none
 	outline: 0 none
 	cursor: pointer
+	&:focus
+		outline: 0 none
 .btn
 	display: inline-block
 	text-transform: uppercase
@@ -62,8 +64,13 @@ button
 		background-color: $color-1
 		color: #ffffff
 		min-width: 150px
+		transition: box-shadow .6s
+		transition: background-color .3s
 		&:hover
-			color: #ffffff
+			color: $color-1
+			background-color: #fff
+			box-shadow: 0 0 2px 2px rgba(#000,.05), -5px -5px 0 0 $color-2
+
 
 .nav-arrow
 	font-size: 2.7em
@@ -84,12 +91,17 @@ textarea
 	border: 0
 	background: #f0f0f0
 	padding: 10px 20px
+	&:focus
+		outline: 1px solid #ccc
 select
 	padding-left: 17px
 	color: #777
 button
 	margin: 0 0 40px
 	font-size: .9em
+
+input:focus
+
 
 h2
 	font-size: 1.4em
@@ -107,6 +119,8 @@ h2
 	z-index: 1
 	overflow: hidden
 	min-height: 990px
+	+media-breakpoint-down(lg)
+		min-height: 900px
 	&::after
 		content: ''
 		position: absolute
@@ -256,6 +270,8 @@ h2
 	text-align: center
 	box-shadow: 15px 20px 0 0 #f3e200, 1px 1px 2px 2px rgba(0,0,0,.09)
 	transition: .5s
+	+media-breakpoint-down(lg)
+		margin-top: 200px
 	&:hover
 		box-shadow: -15px -20px 0 0 #f3e200, 1px 1px 2px 2px rgba(0,0,0,.09),10px 10px 2px 2px rgba(0,0,0,.03)
 		transform: translateY(-5px)
@@ -293,6 +309,9 @@ h2
 	background-position: 7% 80%
 	padding: 50px 0 140px
 	background-size: 40%
+	+media-breakpoint-down(lg)
+		background-position: 0% 70%
+		background-size: 46%
 .section-name
 	position: relative
 	margin-bottom: 15px
@@ -347,11 +366,16 @@ h2
 			z-index: -1
 			background: url(../img/gift-1.png) no-repeat
 			background-size: cover
+			+media-breakpoint-down(lg)
+				width: 435px
+				background-size: contain
 	.h-gift
 		font-size: 2.5em
 		text-transform: uppercase
 		font-weight: 600
 		color: $color-1
+		+media-breakpoint-down(lg)
+			margin-bottom: 0
 	p
 		line-height: 1
 		font-size: 1.3em
@@ -365,7 +389,9 @@ h2
 	padding: 50px 0 80px
 
 h2.section-name-02
-		left: 32%
+	left: 32%
+	+media-breakpoint-down(lg)
+		left: 37%
 .view-all
 	color: $color-1
 	padding: 5px 0
@@ -405,6 +431,9 @@ h2.section-name-02
 				height: 300px
 				position: relative
 				margin: 0 auto
+				+media-breakpoint-down(lg)
+					width: 290px
+					height: 260px
 				&::after,&::before
 					content: ''
 					position: absolute
@@ -490,6 +519,8 @@ h2.section-name-02
 h2.section-name-03
 	left: 10%
 	background-color: #f0f0f2
+	+media-breakpoint-down(lg)
+		left: 12%
 
 /*==========  section three  ==========*/
 /*==========  section four  ==========*/
@@ -701,6 +732,8 @@ h2.section-name-06
 	bottom: auto
 	top: 29%
 	left: 40%
+	+media-breakpoint-down(lg)
+		left: 36%
 .section-description-06
 	margin-top: -30px
 /*==========  section six  ==========*/
@@ -710,16 +743,14 @@ h2.section-name-06
 	padding: 50px 0
 	&-container
 		position: relative
-	&-nav
-		font-size: 1.1em
 		a
 			position: absolute
 			top: 50%
 			transform: translateY(-50%)
-			&:first-child
-				left: -5%
-			&:last-child
-				right: calc(-5% + 15px)
+			&:first-of-type
+				left: 1%
+			&:last-of-type
+				right: 1%
 	figure
 		margin: 0
 		img
@@ -733,6 +764,8 @@ h2.section-name-06
 		text-transform: uppercase
 		font-weight: 600
 		color: $color-1
+		+media-breakpoint-down(lg)
+			margin-bottom: 0
 	p
 		line-height: 1
 		font-size: 1.3em
@@ -745,6 +778,7 @@ h2.section-name-06
 	input
 		width: 65%
 		margin-right: 30px
+
 	.fallow-social
 		display: flex
 		position: absolute
@@ -983,6 +1017,8 @@ h2.section-name-06
 	padding: 5px 0 5px 5px
 	border-radius: 50px
 	left: 38% !important
+	+media-breakpoint-down(lg)
+		bottom: 20%
 .skitter .box_clone
 	position: absolute
 	top: 0
@@ -1035,14 +1071,27 @@ button.active
 			border-bottom: 2px solid $color-1
 	input[type="checkbox"]
 		display: none
-		&:checked ~ .con
-			height: 200px
+		&:checked + .con
+			height: 100px
 	.con
 		height: 0
 		transition: .5s
 		overflow: hidden
 		p
-			font-size: 12px
+			line-height: 1.5
+			font-size: 14px
 			margin-left: 20px
-			background-color: #fff
-	
+			color: $color-1
+			font-weight: 400
+
+#question-form
+	position: relative
+	background-color: #fff
+	max-width: 300px
+	margin: 20px auto
+	text-align: center
+	input, textarea
+		width: 90%
+		margin: 30px auto 0
+	button[type="submit"]
+		margin-top: 20px
