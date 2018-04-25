@@ -9,6 +9,9 @@ body
 .justify-between
 	justify-content: space-between
 
+.h-auto
+	height: auto
+
 .width-100
 	width: 100%
 
@@ -26,12 +29,18 @@ body
 
 .zero-flex
 	flex: 0
-
-.d-flex
+.align-xs-center
+	+media-breakpoint-down(xs)
+		text-align: center !important
+		margin-bottom: 10px
+.dis-flex
 	display: flex
 	+media-breakpoint-down(md)
 		margin-right: -15px
 		padding-right: 0
+	+media-breakpoint-down(sm)
+		margin: 10px 0 80px
+		padding-right: 15px
 .t-a
 	text-align: center
 .m-auto
@@ -108,12 +117,16 @@ input:focus
 
 h2
 	font-size: 1.4em
+	+media-breakpoint-down(xs)
+		font-size: 1.2em
 
 .section-description
 	columns: 2
 	+media-breakpoint-down(md)
 		columns: 1
 		padding-top: 50px
+	+media-breakpoint-down(sm)
+		padding-top: 0
 
 .page-header
 	height: 120vh
@@ -128,7 +141,9 @@ h2
 	+media-breakpoint-down(lg)
 		min-height: 860px
 	+media-breakpoint-down(sm)
-		min-height: 1200px
+		min-height: 1020px
+	+media-breakpoint-down(xs)
+		min-height: 1020px
 	&::after
 		content: ''
 		position: absolute
@@ -244,8 +259,17 @@ h2
 				list-style: none
 				padding-bottom: 20px
 				columns: 2
+				+media-breakpoint-down(sm)
+					columns: 1
+					position: static
+					padding: 15px 0 0 20px
+					margin-bottom: 0
+					display: block
+					width: 100%
 				& > li
 					margin-bottom: 20px
+					+media-breakpoint-down(sm)
+						margin-bottom: 10px
 			&:hover ul
 				display: block
 				z-index: 99
@@ -258,6 +282,8 @@ h2
 				text-transform: uppercase
 				font-weight: 600
 				position: relative
+				+media-breakpoint-down(sm)
+					border-bottom: 1px solid #ececec
 				&::before
 					content: ''
 					position: absolute
@@ -277,12 +303,17 @@ h2
 	display: flex
 	align-items: center
 	height: calc(100vh - 144px)
+	+media-breakpoint-down(sm)
+		height: auto
+		margin: 30px auto
 	.slogan
 		text-transform: uppercase
 		+media-breakpoint-down(lg)
 			font-size: .8em
 		+media-breakpoint-down(md)
 			font-size: .75em
+		+media-breakpoint-down(xs)
+			font-size: 0.6em
 		&-big
 			color: $color-2
 			font-size: 10em
@@ -357,6 +388,20 @@ h2
 	+media-breakpoint-down(md)
 		background-position: -450% 70%
 		background-size: 90%
+	+media-breakpoint-down(sm)
+		background: none
+		padding: 50px 0 50px
+	.feature
+		margin-bottom: 55px
+		+media-breakpoint-down(sm)
+			text-align: center
+		figure
+		h3
+			display: inline-block
+			margin-left: 15px
+		p
+			margin-top: 5px
+			
 .section-name
 	position: relative
 	margin-bottom: 15px
@@ -374,15 +419,8 @@ h2
 		left: 21%
 		+media-breakpoint-down(md)
 			left: 25%
-	.feature
-		margin-bottom: 55px
-		figure
-			display: inline-block
-		h3
-			display: inline-block
-			margin-left: 15px
-		p
-			margin-top: 5px
+		+media-breakpoint-down(xs)
+			left: 10%
 /*==========  section one  ==========*/
 
 /*==========  section gift  ==========*/
@@ -401,8 +439,14 @@ h2
 		width: 15vw
 		z-index: -1
 		background-color: $color-1
+		+media-breakpoint-down(sm)
+			display: none
 	.container
 		padding: 50px
+		+media-breakpoint-down(sm)
+			padding: 50px 0px
+		+media-breakpoint-down(xs)
+			padding: 50px 15px
 		&::before
 			content: ''
 			position: absolute
@@ -418,6 +462,8 @@ h2
 				background-size: contain
 			+media-breakpoint-down(md)
 				left: -25vw
+			+media-breakpoint-down(sm)
+				display: none
 
 	.h-gift
 		font-size: 2.5em
@@ -437,11 +483,16 @@ h2
 /*==========  section two  ==========*/
 .services
 	padding: 50px 0 80px
-
+	+media-breakpoint-down(sm)
+		padding: 50px 0 60px
 h2.section-name-02
 	left: 32%
 	+media-breakpoint-down(lg)
 		left: 37%
+	+media-breakpoint-down(sm)
+		left: 23%
+	+media-breakpoint-down(xs)
+		left: 38%
 .view-all
 	color: $color-1
 	padding: 5px 0
@@ -486,6 +537,8 @@ h2.section-name-02
 				+media-breakpoint-down(lg)
 					width: 290px
 					height: 260px
+				+media-breakpoint-down(xs)
+					width: 270px
 				&::after,&::before
 					content: ''
 					position: absolute
@@ -531,10 +584,6 @@ h2.section-name-02
 				margin-top: 10px
 		&:hover .services-item-content
 			opacity: 1
-
-
-
-
 /*==========  section two  ==========*/
 /*==========  section three  ==========*/
 .support
@@ -542,6 +591,8 @@ h2.section-name-02
 	padding: 30px 0 200px
 	background-size: cover
 	min-height: 1080px
+	+media-breakpoint-down(sm)
+		min-height: 900px
 	&-question
 		ul
 			margin: 0
@@ -560,6 +611,8 @@ h2.section-name-02
 					color: $color-1
 	.section-name
 		margin-bottom: 40px
+		+media-breakpoint-down(sm)
+			margin-bottom: 0
 	&-more
 		p
 			margin-bottom: 2em
@@ -578,6 +631,10 @@ h2.section-name-03
 		left: 12%
 	+media-breakpoint-down(md)
 		left: 16%
+	+media-breakpoint-down(sm)
+		left: 23%
+	+media-breakpoint-down(xs)
+		left: 2%
 
 /*==========  section three  ==========*/
 /*==========  section four  ==========*/
@@ -745,6 +802,8 @@ h2.section-name-04
 /*==========  section six  ==========*/
 .team
 	padding: 100px 0
+	+media-breakpoint-down(sm)
+		padding: 50px 0
 	&-nav
 		font-size: 2.7em
 		margin-top: 60px
@@ -794,6 +853,11 @@ h2.section-name-06
 	+media-breakpoint-down(md)
 		left: 15%
 		top: 34%
+	+media-breakpoint-down(sm)
+		left: 21%
+	+media-breakpoint-down(xs)
+		left: 34%
+		top: 30%
 .section-description-06
 	margin-top: -30px
 /*==========  section six  ==========*/
@@ -837,9 +901,15 @@ h2.section-name-06
 		position: relative
 		+media-breakpoint-down(md)
 			padding: 50px 0 75px
+		+media-breakpoint-down(sm)
+			padding: 50px 15px 10px
 	input
 		width: 65%
 		margin-right: 30px
+		+media-breakpoint-down(xs)
+			width: 100%
+			margin-right: 0
+			margin-bottom: 10px
 
 	.fallow-social
 		display: flex
@@ -906,7 +976,7 @@ h2.section-name-06
 			width: 80px
 			height: 80px
 		span
-			font-size: 2.7em
+			font-size: 2.2em
 	.copyright
 		margin-top: 80px
 		font-size: .9em
@@ -1030,9 +1100,10 @@ h2.section-name-06
 				background-color: rgba($color-1,.1)
 
 .container-content
-	width: 960px
+	max-width: 960px
 	line-height: 1.8
 	font-size: 1.2em
+	padding: 10px
 /*==========  section single  ==========*/
 /*==========  user style  ==========*/
 /*==========  decoration  ==========*/
@@ -1104,6 +1175,8 @@ h2.section-name-06
 //popup
 .owl-carousel .owl-item img
 	width: auto
+	+media-breakpoint-down(xs)
+		margin: 0 auto
 .owl-dots
 	margin-top: 50px
 	text-align: center

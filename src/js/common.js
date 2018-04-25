@@ -72,7 +72,7 @@ $('.services-items').owlCarousel({
         0:{
             items:1
         },
-        600:{
+        768:{
             items:2
         },
         1000:{
@@ -87,9 +87,10 @@ var owl = $('.team-carousel').owlCarousel({
 	dots: false,
     responsive:{
         0:{
-            items:1
+            items:1,
+            margin:0
         },
-        600:{
+        576:{
             items:2,
             margin:30,
         },
@@ -116,8 +117,8 @@ var owl2 = $('.partners-carousel').owlCarousel({
         0:{
             items:1
         },
-        600:{
-            items:3
+        576:{
+            items:2
         },
         1000:{
             items:4
