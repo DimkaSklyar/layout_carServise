@@ -191,15 +191,19 @@ success: function(response) {
 document.getElementById(result_id).innerHTML = response; 
 }, 
 error: function(response) { 
-document.getElementById(result_id).innerHTML = "<p>Возникла ошибка при отправке формы. Попробуйте еще раз</p>"; 
+    var par = document.getElementById(result_id);
+    var error = document.createElement('p');
+    error.classList.add("m-0");
+    error.innerHTML = "Возникла ошибка при отправке формы. Попробуйте еще раз";
+par.appendChild(error);
 } 
 }); 
 
-jQuery(':input','#'+formMain) 
-.not(':button, :submit, :reset, :hidden') 
-.val('') 
-.removeAttr('checked') 
-.removeAttr('selected'); 
+// jQuery(':input','#'+formMain) 
+// .not(':button, :submit, :reset, :hidden') 
+// .val('') 
+// .removeAttr('checked') 
+// .removeAttr('selected'); 
 }
 
 

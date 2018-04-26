@@ -101,7 +101,7 @@
 					<p class="order-header">Оставить заявку</p>
 					<form action="" method="post" id="form-order">
 						<input type="text" name="name" id="name" placeholder="Имя" required>
-						<input type="email" name="phone" id="phone" placeholder="Телефон" required>
+						<input type="text" name="phone" id="phone" placeholder="Телефон" required>
 						<select name="auto" id="auto">
 							<option value="Toyota" selected>Toyota</option>
 							<option value="Lexus">Lexus</option>
@@ -123,7 +123,7 @@
 						<textarea name="comment" id="comment" cols="30" rows="5" placeholder="Дополнительная информация..."></textarea>
 					</form>
 					<div id="messegeResult">
-						<button id="submit-form-z" type="submit" form="formMain" class="btn btn-darken" onclick="AjaxFormRequest('messegeResult', 'form-order', './order.php')">Отправить</button>
+						<button id="submit-form-z" type="submit" form="form-order" class="btn btn-darken" onclick="AjaxFormRequest('messegeResult', 'form-order', './order.php')">Отправить</button>
 					</div>
 				</div>
 			</div>
@@ -372,8 +372,8 @@
 							<input type="text" name="name" id="name" placeholder="Имя" required>
 							<input type="email" name="email" id="email" placeholder="Email" required>
 							<textarea name="question-q" id="question-q"  rows="5" placeholder="Вопрос?" required></textarea>
-							<div id="messegeResult">
-								<button type="submit" form="formMain" class="btn btn-darken" onclick="AjaxFormRequest('messegeResult', 'question-form', './question.php')" >Отправить</button>
+							<div id="messegeResult-ques">
+								<button type="submit" form="formMain" class="btn btn-darken" onclick="AjaxFormRequest('messegeResult-ques', 'question-form', './question.php')" >Отправить</button>
 							</div>
 						</form>
 						<!-- form itself -->
@@ -484,9 +484,9 @@
 						<form method="post" id="mailyes">
 							<input type="email" name="e-mail" id="e-mail" placeholder="Введите свою электронную почту" required>
 						</form>
-						<div id="messegeResult">
-						<button id="submit-form-p" type="submit" form="formMain" class="btn btn-darken" onclick="AjaxFormRequest('messegeResult', 'mailyes', './subscribe.php')">Отправить</button>
-							</div>
+						<div id="messegeResult-sub">
+							<button id="submit-form-p" type="submit" form="formMain" class="btn btn-darken" onclick="AjaxFormRequest('messegeResult-sub', 'mailyes', './subscribe.php')">Отправить</button>
+						</div>
 					</div>
 					<div class="col-xl-4 col-lg-5">
 						<div class="fallow-social align-center">
@@ -573,5 +573,4 @@
 	<body>
 		<script src="js/scripts.min.js"></script>
 	</body>
-	
 	</html>
