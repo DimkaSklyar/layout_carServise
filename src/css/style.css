@@ -7678,6 +7678,15 @@ h2.section-name-06 {
   }
 }
 
+.subscribe button {
+  margin-bottom: 0;
+}
+
+.subscribe form {
+  text-align: right;
+  width: 100%;
+}
+
 .subscribe .fallow-social {
   display: flex;
   position: absolute;

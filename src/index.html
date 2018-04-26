@@ -102,9 +102,9 @@
 				<div class="order">
 					<p class="order-header">Оставить заявку</p>
 					<form action="" method="post" id="form-order">
-						<input type="text" name="" id="" placeholder="Имя">
-						<input type="email" name="" id="" placeholder="Телефон">
-						<select name="" id="">
+						<input type="text" name="name" id="name" placeholder="Имя">
+						<input type="email" name="phone" id="phone" placeholder="Телефон">
+						<select name="auto" id="auto">
 							<option value="Toyota" selected>Toyota</option>
 							<option value="Lexus">Lexus</option>
 							<option value="Subaru">Subaru</option>
@@ -122,9 +122,11 @@
 							<option value="Калина">Калина</option>
 							<option value="Приора">Приора</option>
 						</select>
-						<textarea name="" id="" cols="30" rows="5" placeholder="Дополнительная информация..."></textarea>
+						<textarea name="comment" id="comment" cols="30" rows="5" placeholder="Дополнительная информация..."></textarea>
 					</form>
-					<button type="submit" form="form-order" class="btn btn-darken">Отправить</button>
+					<div id="messegeResult">
+						<button id="submit-form-z" type="submit" form="formMain" class="btn btn-darken" onclick="AjaxFormRequest('messegeResult', 'form-order', './order.php')" disabled>Отправить</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -368,11 +370,13 @@
 					<div class="view">
 						<a href="faq.html" class="btn btn-darken">Вопрос/Ответ</a><a href="#question-form" class="view-all popup-with-form">Или задайте свой вопрос</a>
 						<!-- form itself -->
-						<form id="question-form" class="white-popup-block mfp-hide">
-							<input type="text" name="" id="" placeholder="Имя">
-							<input type="email" name="" id="" placeholder="Email">
-							<textarea name="" id=""  rows="5" placeholder="Вопрос?"></textarea>
-							<button type="submit" form="form-order" class="btn btn-darken">Отправить</button>
+						<form id="question-form" method="POST" class="white-popup-block mfp-hide">
+							<input type="text" name="name" id="name" placeholder="Имя">
+							<input type="email" name="email" id="email" placeholder="Email">
+							<textarea name="question-q" id="question-q"  rows="5" placeholder="Вопрос?"></textarea>
+							<div id="messegeResult">
+								<button type="submit" form="formMain" class="btn btn-darken" onclick="AjaxFormRequest('messegeResult', 'question-form', './question.php')" disabled>Отправить</button>
+							</div>
 						</form>
 						<!-- form itself -->
 					</div>
@@ -478,7 +482,9 @@
 						<p class="h-gift">Свежие новости</p>
 						<p class="d-xl-block d-none"><span>Подпишись</span> на еженедельную рассылку</p>
 					</div>
-					<div class="col-xl-8 col-lg-7 col-md-8 col-12 dis-flex justify-end flex-column flex-sm-row"><input type="text" name="" id="" placeholder="Введите свою электронную почту"><a href="" class="btn btn-darken">Подписаться</a>
+					<div class="col-xl-8 col-lg-7 col-md-8 col-12 dis-flex justify-end flex-column flex-sm-row"><form method="POST" action="" id="mail-yes">
+						<input type="text" name="email" id="email" placeholder="Введите свою электронную почту"><div id="messegeResult"><button class="btn btn-darken" form="formMain" onclick="AjaxFormRequest('messegeResult', 'mail-yes', './subscribe.php')" disabled>Подписаться</button></div>
+					</form>
 					</div>
 					<div class="col-xl-4 col-lg-5">
 						<div class="fallow-social align-center">
