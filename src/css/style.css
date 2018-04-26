@@ -1,19 +1,35 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "roboto-example";
-  font-weight: normal;
+  font-family: "Rubik";
+  font-weight: 300;
   font-style: normal;
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+  src: url("../fonts/Rubik/Rubik-Light.eot");
+  src: url("../fonts/Rubik/Rubik-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Rubik/Rubik-Light.woff") format("woff"), url("../fonts/Rubik/Rubik-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "roboto-example";
+  font-family: "Rubik";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Rubik/Rubik-Regular.eot");
+  src: url("../fonts/Rubik/Rubik-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Rubik/Rubik-Regular.woff") format("woff"), url("../fonts/Rubik/Rubik-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-weight: 900;
+  font-style: normal;
+  src: url("../fonts/Rubik/Rubik-Black.eot");
+  src: url("../fonts/Rubik/Rubik-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Rubik/Rubik-Black.woff") format("woff"), url("../fonts/Rubik/Rubik-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Rubik";
   font-weight: bold;
   font-style: normal;
-  src: url("../fonts/RobotoBold/RobotoBold.eot");
-  src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
+  src: url("../fonts/Rubik/Rubik-Bold.eot");
+  src: url("../fonts/Rubik/Rubik-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Rubik/Rubik-Bold.woff") format("woff"), url("../fonts/Rubik/Rubik-Bold.ttf") format("truetype");
 }
 
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -2649,8 +2665,8 @@ html {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../libs/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../libs/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../libs/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../libs/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/FontAwesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/FontAwesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/FontAwesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/FontAwesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -8063,7 +8079,6 @@ h2 {
 
 .choose-us .feature h3 {
   display: inline-block;
-  margin-left: 15px;
 }
 
 .choose-us .feature p {

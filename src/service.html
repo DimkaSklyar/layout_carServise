@@ -140,7 +140,13 @@
 						<p class="h-gift">Свежие новости</p>
 						<p class="d-xl-block d-none"><span>Подпишись</span> на еженедельную рассылку</p>
 					</div>
-					<div class="col-xl-8 col-lg-7 col-md-8 col-12 dis-flex justify-end flex-column flex-sm-row"><input type="text" name="" id="" placeholder="Введите свою электронную почту"><a href="" class="btn btn-darken">Подписаться</a>
+					<div class="col-xl-8 col-lg-7 col-md-8 col-12 dis-flex justify-end flex-column flex-sm-row">
+						<form method="post" id="mailyes">
+							<input type="email" name="e-mail" id="e-mail" placeholder="Введите свою электронную почту" required>
+						</form>
+						<div id="messegeResult-sub">
+							<button id="submit-form-p" type="submit" form="mailyes" class="btn btn-darken" onclick="AjaxFormRequest('messegeResult-sub', 'mailyes', './subscribe.php')">Отправить</button>
+						</div>
 					</div>
 					<div class="col-xl-4 col-lg-5">
 						<div class="fallow-social align-center">
@@ -227,5 +233,4 @@
 	<body>
 		<script src="js/scripts.min.js"></script>
 	</body>
-	
 	</html>
