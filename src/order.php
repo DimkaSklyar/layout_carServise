@@ -9,7 +9,7 @@ $message = '<span style="font-weight:bold;color:#ff6600;font-size:18px;"><i>ЗА
 Марка авто: <span style="font-weight:bold;color:#339900;">'.$_POST['auto'].'</span><br>  
 Комментарий: <span style="font-weight:bold;color:#339900;font-size:24px;"> '.$_POST['comment'].'</span>'; 
 $headers = "Content-type: text/html; charset=UTF-8 \r\n"; 
-$headers .= "From: <info@my-site.ru\r\n"; // от кого, придумайте ящик или укажите почту своего сайта. 
+$headers .= "From: info@my-site.ru\r\n"; // от кого, придумайте ящик или укажите почту своего сайта. 
 $result = mail($to, $subject, $message, $headers); 
 
 if ($result){ 

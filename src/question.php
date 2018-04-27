@@ -6,9 +6,9 @@ $subject = "ВОПРОС!"; //тема
 $message = '<span style="font-weight:bold;color:#ff6600;font-size:18px;"><i>ВОПРОС!</i> </span><br><br> 
 Имя: <span style="font-weight:bold;color:#000;">'.$_POST['q-name'].'</span><br> 
 E-mail: <span style="font-weight:bold;color:#339900;">'.$_POST['q-mail'].'</span><br> 
-Вопрос: <span style="font-weight:bold;color:#339900;font-size:24px;"> '.$_POST['question'].'</span>'; 
+Вопрос: <span style="font-weight:bold;color:#339900;font-size:24px;"> '.$_POST['question-q'].'</span>'; 
 $headers = "Content-type: text/html; charset=UTF-8 \r\n"; 
-$headers .= "From: <info@my-site.ru\r\n"; // от кого, придумайте ящик или укажите почту своего сайта. 
+$headers .= "From: info@my-site.ru\r\n"; // от кого, придумайте ящик или укажите почту своего сайта. 
 $result = mail($to, $subject, $message, $headers); 
 
 if ($result){ 

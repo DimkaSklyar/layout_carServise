@@ -181,8 +181,21 @@ $(document).ready(function() {
     
 });
 
+$('#form-order').submit(function(e){
+    e.preventDefault();
+    AjaxFormRequest('messegeResult-order','form-order','./order.php');
+});
+
+$('#question-form').submit(function(e){
+    e.preventDefault();
+    AjaxFormRequest('messegeResult-ques','question-form','./question.php');
+});
+
+$('#mailyes').submit(function(e){
+    e.preventDefault();
+    AjaxFormRequest('messegeResult-sub','mailyes','./subscribe.php');
+});
 function AjaxFormRequest(result_id,formMain,url) { 
-    if ($('#'+formMain).find('input').val() != ''){
     jQuery.ajax({ 
         url: url, 
         type: "POST", 
@@ -190,6 +203,11 @@ function AjaxFormRequest(result_id,formMain,url) {
         data: jQuery("#"+formMain).serialize(), 
         success: function(response) { 
             document.getElementById(result_id).innerHTML = response; 
+            $(':input','#'+formMain) 
+            .not(':button, :submit, :reset, :hidden') 
+            .val('') 
+            .removeAttr('checked') 
+            .removeAttr('selected');
         }, 
         error: function(response) { 
             $('.m-0').remove();
@@ -202,12 +220,6 @@ function AjaxFormRequest(result_id,formMain,url) {
             }
         } 
     }); 
-    }
-    // jQuery(':input','#'+formMain) 
-    // .not(':button, :submit, :reset, :hidden') 
-    // .val('') 
-    // .removeAttr('checked') 
-    // .removeAttr('selected'); 
 }
 
 

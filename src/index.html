@@ -98,7 +98,7 @@
 			<div class="col-xl-4 col-md-6 col-lg-5 col-sm-9">
 				<div class="order">
 					<p class="order-header">Оставить заявку</p>
-					<form action="" method="post" id="form-order">
+					<form method="POST" id="form-order">
 						<input type="text" name="name" id="name" placeholder="Имя" required>
 						<input type="text" name="phone" id="phone" placeholder="Телефон" required>
 						<select name="auto" id="auto">
@@ -122,7 +122,7 @@
 						<textarea name="comment" id="comment" cols="30" rows="5" placeholder="Дополнительная информация..."></textarea>
 					</form>
 					<div id="messegeResult-order">
-						<button id="submit-form-z" type="submit" form="form-order" class="btn btn-darken" onclick="AjaxFormRequest('messegeResult-order', 'form-order', './order.php')">Отправить</button>
+						<button id="submit-form-z" type="submit" form="form-order" class="btn btn-darken">Отправить</button>
 					</div>
 				</div>
 			</div>
@@ -372,7 +372,7 @@
 							<input type="email" name="q-mail" id="q-mail" placeholder="Email" required>
 							<textarea name="question-q" id="question-q"  rows="5" placeholder="Вопрос?" required></textarea>
 							<div id="messegeResult-ques">
-								<button type="submit" form="question-form" class="btn btn-darken" onclick="AjaxFormRequest('messegeResult-ques', 'question-form', './question.php')" >Отправить</button>
+								<button type="submit" form="question-form" class="btn btn-darken" >Отправить</button>
 							</div>
 						</form>
 						<!-- form itself -->
@@ -484,7 +484,7 @@
 							<input type="email" name="e-mail" id="e-mail" placeholder="Введите свою электронную почту" required>
 						</form>
 						<div id="messegeResult-sub">
-							<button id="submit-form-p" type="submit" form="mailyes" class="btn btn-darken" onclick="AjaxFormRequest('messegeResult-sub', 'mailyes', './subscribe.php')">Отправить</button>
+							<button id="submit-form-p" type="submit" form="mailyes" class="btn btn-darken">Отправить</button>
 						</div>
 					</div>
 					<div class="col-xl-4 col-lg-5">
