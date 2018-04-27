@@ -121,8 +121,8 @@
 						</select>
 						<textarea name="comment" id="comment" cols="30" rows="5" placeholder="Дополнительная информация..."></textarea>
 					</form>
-					<div id="messegeResult">
-						<button id="submit-form-z" type="submit" form="form-order" class="btn btn-darken" onclick="AjaxFormRequest('messegeResult', 'form-order', './order.php')">Отправить</button>
+					<div id="messegeResult-order">
+						<button id="submit-form-z" type="submit" form="form-order" class="btn btn-darken" onclick="AjaxFormRequest('messegeResult-order', 'form-order', './order.php')">Отправить</button>
 					</div>
 				</div>
 			</div>
@@ -368,11 +368,11 @@
 						<a href="faq.html" class="btn btn-darken">Вопрос/Ответ</a><a href="#question-form" class="view-all popup-with-form">Или задайте свой вопрос</a>
 						<!-- form itself -->
 						<form id="question-form" method="POST" class="white-popup-block mfp-hide">
-							<input type="text" name="name" id="name" placeholder="Имя" required>
-							<input type="email" name="email" id="email" placeholder="Email" required>
+							<input type="text" name="q-name" id="q-name" placeholder="Имя" required>
+							<input type="email" name="q-mail" id="q-mail" placeholder="Email" required>
 							<textarea name="question-q" id="question-q"  rows="5" placeholder="Вопрос?" required></textarea>
 							<div id="messegeResult-ques">
-								<button type="submit" form="formMain" class="btn btn-darken" onclick="AjaxFormRequest('messegeResult-ques', 'question-form', './question.php')" >Отправить</button>
+								<button type="submit" form="question-form" class="btn btn-darken" onclick="AjaxFormRequest('messegeResult-ques', 'question-form', './question.php')" >Отправить</button>
 							</div>
 						</form>
 						<!-- form itself -->

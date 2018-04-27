@@ -101,7 +101,7 @@ gulp.task('build', ['clean', 'img', 'sass', 'js'], function() {
 	var buildJs = gulp.src('src/js/**/*') 
 	.pipe(gulp.dest('dist/js'))
 
-	var buildHtml = gulp.src('src/*.html') 
+	var buildHtml = gulp.src(['src/*.html','src/*.php']) 
 	.pipe(gulp.dest('dist'));
 });
 
