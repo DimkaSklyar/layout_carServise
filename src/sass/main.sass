@@ -6,9 +6,14 @@
 body
 	font-family: 'Rubik', sans-serif
 	font-size: 0.95em
-
 .justify-between
 	justify-content: space-between
+
+.h-auto
+	height: auto
+
+.width-100
+	width: 100%
 
 .justify-end
 	justify-content: flex-end
@@ -24,9 +29,18 @@ body
 
 .zero-flex
 	flex: 0
-
-.d-flex
+.align-xs-center
+	+media-breakpoint-down(xs)
+		text-align: center !important
+		margin-bottom: 10px
+.dis-flex
 	display: flex
+	+media-breakpoint-down(md)
+		margin-right: -15px
+		padding-right: 0
+	+media-breakpoint-down(sm)
+		margin: 10px 0 80px
+		padding-right: 15px
 .t-a
 	text-align: center
 .m-auto
@@ -44,6 +58,8 @@ button
 	border: none
 	outline: 0 none
 	cursor: pointer
+	&:focus
+		outline: 0 none
 .btn
 	display: inline-block
 	text-transform: uppercase
@@ -60,8 +76,13 @@ button
 		background-color: $color-1
 		color: #ffffff
 		min-width: 150px
+		transition: box-shadow .6s
+		transition: background-color .3s
 		&:hover
-			color: #ffffff
+			color: $color-1
+			background-color: #fff
+			box-shadow: 0 0 2px 2px rgba(#000,.05), -5px -5px 0 0 $color-2
+
 
 .nav-arrow
 	font-size: 2.7em
@@ -82,6 +103,8 @@ textarea
 	border: 0
 	background: #f0f0f0
 	padding: 10px 20px
+	&:focus
+		outline: 1px solid #ccc
 select
 	padding-left: 17px
 	color: #777
@@ -89,14 +112,24 @@ button
 	margin: 0 0 40px
 	font-size: .9em
 
+input:focus
+
+
 h2
 	font-size: 1.4em
+	+media-breakpoint-down(xs)
+		font-size: 1.2em
 
 .section-description
 	columns: 2
+	+media-breakpoint-down(md)
+		columns: 1
+		padding-top: 50px
+	+media-breakpoint-down(sm)
+		padding-top: 0
 
 .page-header
-	height: 990px
+	height: 120vh
 	width: 100%
 	background-color: $color-1
 	background-image: url('../img/header.jpg')
@@ -104,6 +137,13 @@ h2
 	position: relative
 	z-index: 1
 	overflow: hidden
+	min-height: 990px
+	+media-breakpoint-down(lg)
+		min-height: 860px
+	+media-breakpoint-down(sm)
+		min-height: 1020px
+	+media-breakpoint-down(xs)
+		min-height: 1020px
 	&::after
 		content: ''
 		position: absolute
@@ -123,32 +163,42 @@ h2
 	display: inline-block
 	padding: 15px 0
 	color: #a7a7a7
+	+media-breakpoint-down(md)
+		display: block
+		padding: 5px 0
 	& a
 		color: #a7a7a7
+		&:hover
+			color: #fff
+			cursor: pointer
 	& i
 		margin-right: 10px
-	&:hover
-		color: #fff
-		cursor: pointer
-	&:hover a
-		color: #fff
 
 .top-phone
 	a
 		border-right: 1px solid #a7a7a7
 		padding-right: 10px
+		+media-breakpoint-down(md)
+			border: none
 
 .top-work-time
 	a
 		border-right: 1px solid #a7a7a7
 		padding: 0 10px
+		+media-breakpoint-down(md)
+			border: none
+			padding: 0
 
 .top-mail,
 .top-find-us
 	margin-left: 10px
+	+media-breakpoint-down(md)
+		margin: 0
 
 .top-location
 	display: flex
+	+media-breakpoint-down(md)
+		display: block
 
 .top-menu
 	background-color: #fff
@@ -171,47 +221,99 @@ h2
 		font-weight: 600
 		font-size: 24px
 		margin-left: 10px
+		+media-breakpoint-down(md)
+			display: none
 
 .top-nav-bar
 	display: flex
 	align-items: baseline
 	background-color: #fff
+	.mobile-menu-wrapper
+		display: none
+		+media-breakpoint-down(sm)
+			display: block
 	.top-menu
 		display: flex
 		margin: 0
 		padding: 0
 		list-style: none
-	li
-		margin: 0 25px
 		position: relative
-		transition: 3s
-		&:last-child
-			margin-right: 20px
-		&::before
-			content: ''
-			position: absolute
-			width: 6px
-			height: 6px
-			border-radius: 50%
-			background-color: $color-2
-			top: 50%
-			left: -15px
-			transform: translateY(-50%)
-			opacity: 0
-			transition: opacity .2s
-		&:hover::before
-			opacity: 1
-		a
+		+media-breakpoint-down(sm)
 			display: block
-			text-transform: uppercase
-			font-weight: 600
+			display: none
+		& > li
+			margin-right: 40px
+			transition: 3s
+			+media-breakpoint-down(md)
+				margin-right: 30px
+			+media-breakpoint-down(sm)
+				margin: 10px
+			& > ul
+				position: absolute
+				display: none
+				width: calc(100% - 115px)
+				top: 20px
+				left: 130px
+				padding-top: 60px
+				background-color: #fff
+				list-style: none
+				padding-bottom: 20px
+				columns: 2
+				+media-breakpoint-down(sm)
+					columns: 1
+					position: static
+					padding: 15px 0 0 20px
+					margin-bottom: 0
+					display: block
+					width: 100%
+				& > li
+					margin-bottom: 20px
+					+media-breakpoint-down(sm)
+						margin-bottom: 10px
+			&:hover ul
+				display: block
+				z-index: 99
+			&:hover .top-nav-bar
+				height: 400px
+			&:last-child
+				margin-right: 20px
+			a
+				display: block
+				text-transform: uppercase
+				font-weight: 600
+				position: relative
+				+media-breakpoint-down(sm)
+					border-bottom: 1px solid #ececec
+				&::before
+					content: ''
+					position: absolute
+					width: 6px
+					height: 6px
+					border-radius: 50%
+					background-color: $color-2
+					top: 50%
+					left: -15px
+					transform: translateY(-50%)
+					opacity: 0
+					transition: opacity .2s
+				&:hover::before
+					opacity: 1
 
 .slogan-align
 	display: flex
 	align-items: center
 	height: calc(100vh - 144px)
+	+media-breakpoint-down(sm)
+		height: auto
+		margin: 30px auto
 	.slogan
 		text-transform: uppercase
+		+media-breakpoint-down(lg)
+			font-size: .8em
+		+media-breakpoint-down(md)
+			font-size: .75em
+		+media-breakpoint-down(xs)
+			font-size: 0.6em
 		&-big
 			color: $color-2
 			font-size: 10em
@@ -232,10 +334,17 @@ h2
 
 .order
 	background-color: #fff
-	margin-top: 300px
+	margin-top: 260px
 	text-align: center
+	padding-bottom: 20px
 	box-shadow: 15px 20px 0 0 #f3e200, 1px 1px 2px 2px rgba(0,0,0,.09)
 	transition: .5s
+	+media-breakpoint-down(lg)
+		margin-top: 150px
+	+media-breakpoint-down(md)
+		margin-top: 125px
+	+media-breakpoint-down(sm)
+		margin-top: 0
 	&:hover
 		box-shadow: -15px -20px 0 0 #f3e200, 1px 1px 2px 2px rgba(0,0,0,.09),10px 10px 2px 2px rgba(0,0,0,.03)
 		transform: translateY(-5px)
@@ -255,7 +364,7 @@ h2
 		padding-left: 17px
 		color: #777
 	button
-		margin: 0 0 40px
+		margin: 0 0 20px
 		font-size: .9em
 
 /*==========  section slider  ==========*/
@@ -263,6 +372,7 @@ h2
 	position: absolute
 	top: 0
 	width: 100%
+	min-height: 1080px
 /*==========  section slider  ==========*/
 
 /*==========  section one  ==========*/
@@ -273,6 +383,26 @@ h2
 	background-position: 7% 80%
 	padding: 50px 0 140px
 	background-size: 40%
+	+media-breakpoint-down(lg)
+		background-position: 0% 70%
+		background-size: 46%
+	+media-breakpoint-down(md)
+		background-position: -450% 70%
+		background-size: 90%
+	+media-breakpoint-down(sm)
+		background: none
+		padding: 50px 0 50px
+	.feature
+		margin-bottom: 55px
+		+media-breakpoint-down(sm)
+			text-align: center
+		figure
+		h3
+			display: inline-block
+		p
+			margin-top: 5px
+
+			
 .section-name
 	position: relative
 	margin-bottom: 15px
@@ -288,15 +418,10 @@ h2
 		padding: 10px 0
 		bottom: 45px
 		left: 21%
-	.feature
-		margin-bottom: 55px
-		figure
-			display: inline-block
-		h3
-			display: inline-block
-			margin-left: 15px
-		p
-			margin-top: 5px
+		+media-breakpoint-down(md)
+			left: 25%
+		+media-breakpoint-down(xs)
+			left: 10%
 /*==========  section one  ==========*/
 
 /*==========  section gift  ==========*/
@@ -315,8 +440,14 @@ h2
 		width: 15vw
 		z-index: -1
 		background-color: $color-1
+		+media-breakpoint-down(sm)
+			display: none
 	.container
 		padding: 50px
+		+media-breakpoint-down(sm)
+			padding: 50px 0px
+		+media-breakpoint-down(xs)
+			padding: 50px 15px
 		&::before
 			content: ''
 			position: absolute
@@ -327,11 +458,21 @@ h2
 			z-index: -1
 			background: url(../img/gift-1.png) no-repeat
 			background-size: cover
+			+media-breakpoint-down(lg)
+				width: 435px
+				background-size: contain
+			+media-breakpoint-down(md)
+				left: -25vw
+			+media-breakpoint-down(sm)
+				display: none
+
 	.h-gift
 		font-size: 2.5em
 		text-transform: uppercase
 		font-weight: 600
 		color: $color-1
+		+media-breakpoint-down(lg)
+			margin-bottom: 0
 	p
 		line-height: 1
 		font-size: 1.3em
@@ -343,14 +484,23 @@ h2
 /*==========  section two  ==========*/
 .services
 	padding: 50px 0 80px
-
+	+media-breakpoint-down(sm)
+		padding: 50px 0 60px
 h2.section-name-02
-		left: 32%
+	left: 32%
+	+media-breakpoint-down(lg)
+		left: 37%
+	+media-breakpoint-down(sm)
+		left: 23%
+	+media-breakpoint-down(xs)
+		left: 38%
 .view-all
 	color: $color-1
 	padding: 5px 0
 	border-bottom: 1px dashed $color-1
 	position: relative
+	+media-breakpoint-down(md)
+		display: inline-block
 	&::before
 		content: ''
 		position: absolute
@@ -385,6 +535,11 @@ h2.section-name-02
 				height: 300px
 				position: relative
 				margin: 0 auto
+				+media-breakpoint-down(lg)
+					width: 290px
+					height: 260px
+				+media-breakpoint-down(xs)
+					width: 270px
 				&::after,&::before
 					content: ''
 					position: absolute
@@ -430,10 +585,6 @@ h2.section-name-02
 				margin-top: 10px
 		&:hover .services-item-content
 			opacity: 1
-
-
-
-
 /*==========  section two  ==========*/
 /*==========  section three  ==========*/
 .support
@@ -441,6 +592,8 @@ h2.section-name-02
 	padding: 30px 0 200px
 	background-size: cover
 	min-height: 1080px
+	+media-breakpoint-down(sm)
+		min-height: 900px
 	&-question
 		ul
 			margin: 0
@@ -459,17 +612,30 @@ h2.section-name-02
 					color: $color-1
 	.section-name
 		margin-bottom: 40px
+		+media-breakpoint-down(sm)
+			margin-bottom: 0
 	&-more
 		p
 			margin-bottom: 2em
 		p:last-of-type
 			margin-bottom: 50px
+			+media-breakpoint-down(md)
+				margin-bottom: 30px
 	.view
 		a:first-child
 			margin-right: 30px
+		a:last-child
 h2.section-name-03
 	left: 10%
 	background-color: #f0f0f2
+	+media-breakpoint-down(lg)
+		left: 12%
+	+media-breakpoint-down(md)
+		left: 16%
+	+media-breakpoint-down(sm)
+		left: 23%
+	+media-breakpoint-down(xs)
+		left: 2%
 
 /*==========  section three  ==========*/
 /*==========  section four  ==========*/
@@ -637,6 +803,8 @@ h2.section-name-04
 /*==========  section six  ==========*/
 .team
 	padding: 100px 0
+	+media-breakpoint-down(sm)
+		padding: 50px 0
 	&-nav
 		font-size: 2.7em
 		margin-top: 60px
@@ -679,8 +847,18 @@ h2.section-name-04
 
 h2.section-name-06
 	bottom: auto
-	top: 34%
+	top: 29%
 	left: 40%
+	+media-breakpoint-down(lg)
+		left: 36%
+	+media-breakpoint-down(md)
+		left: 15%
+		top: 34%
+	+media-breakpoint-down(sm)
+		left: 21%
+	+media-breakpoint-down(xs)
+		left: 34%
+		top: 30%
 .section-description-06
 	margin-top: -30px
 /*==========  section six  ==========*/
@@ -690,16 +868,14 @@ h2.section-name-06
 	padding: 50px 0
 	&-container
 		position: relative
-	&-nav
-		font-size: 1.1em
 		a
 			position: absolute
 			top: 50%
 			transform: translateY(-50%)
-			&:first-child
-				left: -5%
-			&:last-child
-				right: calc(-5% + 15px)
+			&:first-of-type
+				left: 1%
+			&:last-of-type
+				right: 1%
 	figure
 		margin: 0
 		img
@@ -713,6 +889,8 @@ h2.section-name-06
 		text-transform: uppercase
 		font-weight: 600
 		color: $color-1
+		+media-breakpoint-down(lg)
+			margin-bottom: 0
 	p
 		line-height: 1
 		font-size: 1.3em
@@ -722,9 +900,23 @@ h2.section-name-06
 	&-social
 		padding: 100px 0
 		position: relative
+		+media-breakpoint-down(md)
+			padding: 50px 0 75px
+		+media-breakpoint-down(sm)
+			padding: 50px 15px 10px
 	input
 		width: 65%
 		margin-right: 30px
+		+media-breakpoint-down(xs)
+			width: 100%
+			margin-right: 0
+			margin-bottom: 10px
+	button
+		margin-bottom: 0
+	form
+		text-align: right
+		width: 100%
+
 	.fallow-social
 		display: flex
 		position: absolute
@@ -733,6 +925,7 @@ h2.section-name-06
 		padding: 10px 40px
 		width: 100%
 		color: #ffffff
+		margin-left: -15px
 		p
 			margin: 0
 			font-weight: 300
@@ -789,7 +982,7 @@ h2.section-name-06
 			width: 80px
 			height: 80px
 		span
-			font-size: 2.7em
+			font-size: 2.2em
 	.copyright
 		margin-top: 80px
 		font-size: .9em
@@ -822,7 +1015,7 @@ h2.section-name-06
 		position: relative
 		&::before
 			font-family: FontAwesome
-			content: '\f099'
+			content: '\f118'
 			position: absolute
 			top: 0
 			left: 0
@@ -830,7 +1023,94 @@ h2.section-name-06
 			color: $color-2
 		.author
 			text-align: right
+
 /*==========  section footer  ==========*/
+/*==========  section single  ==========*/
+
+.single-page
+	.top-nav-bar
+		background-color: #fff23f
+		.top-menu
+			background-color: inherit
+			li
+				& > ul
+					background-color: #fff23f
+				a
+					&::before
+						background-color: $color-1
+	.top-contact
+		a
+			&:hover
+				color: $color-1
+.main-content
+	h1
+		text-transform: uppercase
+		padding: 10px 0
+		text-align: center
+		font-size: 4em
+		color: #344bb0
+		font-weight: 900
+		line-height: 1
+		padding: 40px 0
+	& + .row
+		padding-bottom: 100px
+		figure
+			text-align: center
+			img
+				width: 90%
+		img
+			width: 90%
+			margin-bottom: 40px
+			box-shadow: 10px 15px 0 0 #f3e200, 1px 1px 2px 2px rgba(0,0,0,.09)
+			transition: .3s
+			&:hover
+				box-shadow: -10px -10px 0 0 #f3e200, 1px 1px 2px 2px rgba(0,0,0,.09),10px 10px 2px 2px rgba(0,0,0,.03)
+				transform: translateY(-5px)
+		p
+			margin-bottom: 30px
+			i
+				margin-right: 10px
+		ul
+			margin-bottom: 30px
+			li
+				margin-bottom: 10px
+		a
+			color: $color-1
+			&:hover
+				border-bottom: 1px dashed $color-1
+		.map
+			width: 100%
+			box-shadow: 10px 15px 0 0 #f3e200, 1px 1px 2px 2px rgba(0,0,0,.09)
+			transition: .3s
+			&:hover
+				box-shadow: -10px -10px 0 0 #f3e200, 1px 1px 2px 2px rgba(0,0,0,.09),10px 10px 2px 2px rgba(0,0,0,.03)
+		table
+			width: 100%
+			margin-top: 40px
+			margin-bottom: 20px
+			td
+				padding: 10px
+			th:last-child, td:last-child
+				text-align: left
+				width: 15%
+			tr:nth-child(odd):not(:first-child)
+				background-color: rgba($color-1,.1)
+			th
+				background-color: rgba($color-2,.7)
+				padding: 20px 10px
+				font-weight: 900
+		table#wrap
+			tr
+				background-color: #ffffff
+			tr:nth-child(3n+2):not(:first-child)
+				background-color: rgba($color-1,.1)
+
+.container-content
+	max-width: 960px
+	line-height: 1.8
+	font-size: 1.2em
+	padding: 10px
+/*==========  section single  ==========*/
 /*==========  user style  ==========*/
 /*==========  decoration  ==========*/
 .decoration-right
@@ -870,6 +1150,7 @@ h2.section-name-06
 		right: 0
 		background-color: rgba($color-1,.6)
 		z-index: 0
+
 .skitter .info_slide_dots
 	position: absolute
 	bottom: 30%
@@ -877,6 +1158,8 @@ h2.section-name-06
 	padding: 5px 0 5px 5px
 	border-radius: 50px
 	left: 38% !important
+	+media-breakpoint-down(lg)
+		bottom: 20%
 .skitter .box_clone
 	position: absolute
 	top: 0
@@ -898,6 +1181,8 @@ h2.section-name-06
 //popup
 .owl-carousel .owl-item img
 	width: auto
+	+media-breakpoint-down(xs)
+		margin: 0 auto
 .owl-dots
 	margin-top: 50px
 	text-align: center
@@ -915,3 +1200,56 @@ button.active
 .blog-carousel .owl-stage-outer
 	padding-top: 5px
 @import "media" // Always at the end
+
+
+
+
+.support-question
+	label
+		cursor: pointer
+		line-height: 1.7
+
+		&:hover
+			color: $color-1
+			border-bottom: 2px solid $color-1
+	input[type="checkbox"]
+		display: none
+		&:checked + .con
+			height: 100px
+			+media-breakpoint-down(md)
+				height: 150px
+	.con
+		height: 0
+		transition: .5s
+		overflow: hidden
+		p
+			line-height: 1.5
+			font-size: 14px
+			margin-left: 20px
+			color: $color-1
+			font-weight: 400
+
+#question-form
+	position: relative
+	background-color: #fff
+	max-width: 300px
+	margin: 20px auto
+	text-align: center
+	input, textarea
+		width: 90%
+		margin: 30px auto 0
+	button[type="submit"]
+		margin-top: 20px
+
+.mfp-close-btn-in .mfp-close
+	top: -40px
+	right: -15px
+	color: #fff
+.mfp-close:active
+	top: -40px
+
+.fixprive
+	display: inline-block
+.m-0
+	margin: 0
+	margin-top: -10px
